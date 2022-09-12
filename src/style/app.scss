@@ -15,7 +15,11 @@
 
 //section
 @import 'sections/header';
-//@import 'sections/footer';
+
+@import 'sections/footer/footer';
+@import 'sections/footer/footer-left';
+@import 'sections/footer/footer-right';
+@import 'sections/footer/footer-bottom';
 
 //pages
 @import 'pages/index';

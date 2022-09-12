@@ -1,0 +1,27 @@
+.footer {
+  // TODO change grid in the footer
+  // TODO add grid gap
+  padding: 60px 0 17px 0;
+  background-color: $black;
+
+  @include min(769) {
+    padding: 85px 0 17px 0;
+  }
+
+  .container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    width: 100%;
+
+    grid-template-areas: 'footer-right'
+    'footer-left'
+    'footer-bottom';
+    @include min(769) {
+      grid-template-rows: auto auto;
+      grid-template-columns: 1fr 1fr;
+
+      grid-template-areas: 'footer-left footer-right' 'footer-bottom footer-bottom';
+    }
+  }
+}

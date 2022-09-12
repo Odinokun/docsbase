@@ -1,5 +1,6 @@
 $burger-height: 13px;
 $burger-width: 44px;
+$burger-mobile-width: 34px;
 $burger-open-width: 27px;
 $burger-color: #fff;
 $burger-item: 1px;
@@ -17,10 +18,14 @@ $burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 
   top: 0;
   left: 0;
   display: block;
-  width: $burger-width;
+  width: $burger-mobile-width;
   height: $burger-height;
   cursor: pointer;
   opacity: 0;
+
+  @include min(375) {
+    width: $burger-width;
+  }
 
   &:checked + .burger__label {
     width: $burger-open-width;
@@ -38,7 +43,7 @@ $burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 
 }
 
 .burger__label {
-  width: $burger-width;
+  width: $burger-mobile-width;
   height: $burger-height;
   margin: auto;
   cursor: pointer;
@@ -46,6 +51,10 @@ $burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 
   transition: $transition;
   color: $burger-color;
   border-radius: $burger-item / 2;
+
+  @include min(375) {
+    width: $burger-width;
+  }
 
   &::before,
   &::after {

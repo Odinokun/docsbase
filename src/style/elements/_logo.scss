@@ -3,11 +3,12 @@
 }
 
 .logo__svg {
-  fill: #fff;
-  width: 132px;
   display: block;
-  @include min(600) {
-  width: 170px;
+  fill: #fff;
+  width: 100%;
+  max-width: 132px;
 
+  @include min(600) {
+    width: 170px;
   }
 }
