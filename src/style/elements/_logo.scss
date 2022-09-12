@@ -1,0 +1,13 @@
+.logo {
+  display: block;
+}
+
+.logo__svg {
+  fill: #fff;
+  width: 132px;
+  display: block;
+  @include min(600) {
+  width: 170px;
+
+  }
+}

@@ -1,20 +1,18 @@
 extends ../_template
 
 block variables
-  - var title       = 'Index'
-  - var description = ''
-  - var ogtitle     = ''
-  - var ogimage     = ''
-
-  - var pageHeaderTitle = ''
-  - var breadcrumbs     = 'breadcrumbs link'
+  - let title       = 'Staffeak'
+  - let description = 'Staffeak'
+  - let ogtitle     = 'Staffeak'
+  - let ogimage     = ''
 
 block content
-  .main-wrap.no-js
+  .main-wrap.no-js(style="background-color:#014750")
     include ../sections/header
 
     //begin content
-    main.main.index
+    main.main
+
     //end content
 
     include ../sections/footer

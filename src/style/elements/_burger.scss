@@ -1,7 +1,8 @@
-$burger-height: 17px;
-$burger-width: 24px;
+$burger-height: 13px;
+$burger-width: 44px;
+$burger-open-width: 27px;
 $burger-color: #fff;
-$burger-item: 3px;
+$burger-item: 1px;
 $burger-item-offset: $burger-height - $burger-item * 2;
 $burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 2;
 
@@ -21,6 +22,10 @@ $burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 
   cursor: pointer;
   opacity: 0;
 
+  &:checked + .burger__label {
+    width: $burger-open-width;
+  }
+
   &:checked + .burger__label::before {
     transform: translateY($burger-height / 2 - $burger-item * .5) rotateZ(45deg);
   }
@@ -38,6 +43,7 @@ $burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 
   margin: auto;
   cursor: pointer;
   user-select: none;
+  transition: $transition;
   color: $burger-color;
   border-radius: $burger-item / 2;
 
@@ -46,7 +52,7 @@ $burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 
     display: block;
     height: $burger-item;
     content: '';
-    transition: .5s;
+    transition: $transition;
     border-radius: inherit;
     background: $burger-color;
   }

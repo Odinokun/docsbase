@@ -1,5 +1,22 @@
-//begin header
-header.header#header
+//- begin header
+header.header
   .container
-    include ../elements/burger
-//end header
+    .header__logo
+      include ../elements/logo
+    .header__icons
+      a(href="/" target='_blank' rel="nofollow noopener noreferrer").header__icon
+        +svg('geo')
+      a(href="/" target='_blank' rel="nofollow noopener noreferrer").header__icon
+        +svg('phone')
+    .header__right
+      .header__right-item
+        include ../elements/burger
+      .header__right-item.header__right-item--desktop
+        a(href="/").header__right-item-link Express Service
+        a(href="/").header__right-item-link For Business
+      .header__right-item
+        a(href="/").header__right-item-link-quote
+          span.header__right-item-link-quote-text Get a Quote <span>Now</span>
+          span.header__right-item-link-quote-icon
+            +svg('arr-right-top')
+//- end   header

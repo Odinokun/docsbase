@@ -1,19 +1,21 @@
 // core
-@import 'core/fonts';
 @import 'core/variables';
 @import 'core/mixins';
 @import 'core/base';
 
 //elements
+@import 'elements/logo';
+@import 'elements/menu';
 @import 'elements/burger';
-@import 'elements/breadcrumbs';
+
+//@import 'elements/breadcrumbs';
 //@import 'elements/pagination';
 //@import 'elements/popup';
 //@import 'elements/slickBase';
 
 //section
 @import 'sections/header';
-@import 'sections/footer';
+//@import 'sections/footer';
 
 //pages
 @import 'pages/index';

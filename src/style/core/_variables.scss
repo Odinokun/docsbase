@@ -1,18 +1,15 @@
 // ===== main colors =====
-$brand: #00407a;
-$highlight: #D83612;
-$highlight-hov: darken($highlight, 5%);
-
-// ===== text colors =====
-$text: #181a19;
-
-// ===== link colors =====
-$link: lighten($brand, 10%);
-$link-hov: lighten($link, 25%);
+$dark-blue: #3f3d56;
+$blue-1: #295aa8;
+$blue-2: #174184;
+$blue-light: #c5cfe0;
+$blue-light-2: #f4f7fb;
+$black: #232230;
+$gradient: linear-gradient(101.49deg, #174184 1.75%, #295aa8 100%);
 
 // ===== transition =====
-$transition-hover: .3s ease-in-out;
+$transition: .3s ease-in-out;
 
 // ===== fonts =====
-$font:      'OpenSans', sans-serif;
-$font-bold: 'OpenSans-Bold', sans-serif;
+$font: 'Inter', sans-serif;
+$font-bold: 'HelveticaNowDisplay', sans-serif;

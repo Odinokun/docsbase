@@ -80,7 +80,7 @@
 }
 
 .inner-btn {
-  font-family: 'OpenSans', sans-serif;
+  font-family: $font, sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 1;
@@ -90,7 +90,7 @@
   padding: 10px 30px;
   cursor: pointer;
   user-select: none;
-  transition: background-color $transition-hover;
+  transition: background-color $transition;
   white-space: nowrap;
   text-decoration: none;
   color: #fff;
