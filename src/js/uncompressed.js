@@ -3,8 +3,7 @@
 
 $(document).ready(function ($) {
   pageWidget([
-    'index',
-    'inner'
+    'blog-dockbase',
     ]);
 });
 

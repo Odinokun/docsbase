@@ -3,9 +3,25 @@ $burger-width: 44px;
 $burger-mobile-width: 34px;
 $burger-open-width: 27px;
 $burger-color: #fff;
+$burger-dark-color: #3f3d56;
 $burger-item: 1px;
 $burger-item-offset: $burger-height - $burger-item * 2;
 $burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 2;
+
+.light-page {
+  .burger__label {
+    color: $burger-dark-color;
+
+    &::before,
+    &::after {
+      background: $burger-dark-color;
+    }
+
+    &::after {
+      filter: drop-shadow(0 $burger-item-shadow $burger-dark-color);
+    }
+  }
+}
 
 .burger {
   position: relative;

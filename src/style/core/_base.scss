@@ -157,9 +157,10 @@ svg {
   width: 100%;
   margin: 0 auto;
   padding: 0 10px;
-@include min(600) {
-  padding: 0 20px;
-}
+
+  @include min(600) {
+    padding: 0 20px;
+  }
   @include min(769) {
     padding: 0 30px;
   }
@@ -167,6 +168,43 @@ svg {
     padding: 0 60px;
   }
 }
+
+.light-page {
+  .header {
+    border-bottom: 1px solid $blue-light-2;
+  }
+
+  .header__icon {
+    border: 2px solid rgba(63, 61, 86, .25);
+
+    svg {
+      fill: #3f3d56;
+    }
+  }
+
+  .logo__svg {
+    fill: $dark-blue;
+  }
+
+  .header__right-item {
+    @include min(600) {
+      border-left: 1px solid #c5cfe0;
+    }
+  }
+
+  .header__right-item-link {
+    color: $dark-blue;
+
+    &::before {
+      background-color: $dark-blue;
+    }
+  }
+
+  .header__right-item-link-quote {
+    color: $dark-blue;
+  }
+}
+
 //
 //.btn {
 //  font-family: $font, sans-serif;
@@ -188,3 +226,8 @@ svg {
 //  border-radius: 25px !important;
 //  box-shadow: none;
 //}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}

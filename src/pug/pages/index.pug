@@ -3,8 +3,6 @@ extends ../_template
 block variables
   - let title       = 'Staffeak'
   - let description = 'Staffeak'
-  - let ogtitle     = 'Staffeak'
-  - let ogimage     = ''
 
 block content
   .main-wrap.no-js(style="background-color:#014750")
@@ -12,6 +10,23 @@ block content
 
     //begin content
     main.main
+      // Slider main container
+      .swiper
+        // Additional required wrapper
+        .swiper-wrapper
+          // Slides
+          .swiper-slide Slide 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, obcaecati!
+          .swiper-slide Slide 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, consectetur delectus laborum officia sint vitae. Adipisci laborum minus quo sit.
+          .swiper-slide Slide 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolores ducimus fuga vel! At, enim.
+          |     ...
+        // If we need pagination
+        .swiper-pagination
+        // If we need navigation buttons
+        .swiper-button-prev
+        .swiper-button-next
+        // If we need scrollbar
+        .swiper-scrollbar
+
 
     //end content
 

@@ -1,13 +1,9 @@
 $(function() {
 
-  // begin SVG for IE
   require('./modules/svg4everybody')();
-
-  // begin no-JS
   require('./modules/noJs')();
 
-  // begin Sticky header
-  require('./modules/stickyHeader')();
+  require('./modules/swiper')();
 
   // begin phone mask
   // require('./modules/maskedinput')();
