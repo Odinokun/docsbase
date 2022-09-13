@@ -1,0 +1,46 @@
+mixin slide(pic, text)
+  .news-card
+    a(href="#").news-card__img
+      img(src="assets/img/news/news-"+pic+".jpg" alt="img")
+    .news-card__info
+      .news-card__label
+        +svg('label')
+        span company
+      .news-card__label
+        +svg('label')
+        span digital
+      .news-card__date
+        +svg('calendar')
+        span 22.01.2021
+    a(href="#").news-card__title #{text}
+
+//BEGIN blog-slider
+.blog-slider
+  .swiper-wrapper
+    .blog-slider__slide.swiper-slide
+      +slide('03', 'Our Company has developed internal quality control procedures based on the bespoke QC system')
+    .blog-slider__slide.swiper-slide
+      +slide('04', 'In addition to translation and localization services, depending on the wishes of the client or the legal requirements that translated')
+    .blog-slider__slide.swiper-slide
+      +slide('05', 'The way we handle any translation project is the same whether the translation is performed in-house')
+    .blog-slider__slide.swiper-slide
+      +slide('06', 'Our Company has developed internal quality control procedures')
+    .blog-slider__slide.swiper-slide
+      +slide('07', 'Our Company has developed internal quality control procedures based on the bespoke QC system')
+    .blog-slider__slide.swiper-slide
+      +slide('08', 'In addition to translation and localization services, depending on the wishes of the client or the legal requirements that translated')
+    .blog-slider__slide.swiper-slide
+      +slide('09', 'The way we handle any translation project is the same whether the translation is performed in-house')
+    .blog-slider__slide.swiper-slide
+      +slide('10', 'Our Company has developed internal quality control procedures')
+    .blog-slider__slide.swiper-slide
+      +slide('11', 'In addition to translation and localization services, depending on the wishes of the client or the legal requirements that translated')
+    .blog-slider__slide.swiper-slide
+      +slide('01', 'The way we handle any translation project is the same whether the translation is performed in-house')
+    .blog-slider__slide.swiper-slide
+      +slide('02', 'Our Company has developed internal quality control procedures')
+
+  .swiper-button-prev
+  .swiper-button-next
+  .swiper-scrollbar
+//END   blog-slider

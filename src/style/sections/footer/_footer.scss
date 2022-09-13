@@ -1,6 +1,4 @@
 .footer {
-  // TODO change grid in the footer
-  // TODO add grid gap
   padding: 60px 0 17px 0;
   background-color: $black;
 
@@ -10,7 +8,7 @@
 
   .container {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-columns: 1fr;
     width: 100%;
 

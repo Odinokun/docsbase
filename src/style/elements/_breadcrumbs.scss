@@ -1,5 +1,9 @@
-.breadcrumbs{
-  padding: 19px 0;
+.breadcrumbs {
+  padding: 10px 0;
+
+  @include min(769) {
+    padding: 19px 0;
+  }
 }
 
 .breadcrumbs__list {
@@ -12,17 +16,20 @@
 .breadcrumbs__item {
   position: relative;
   list-style: none;
+
   &::after {
     font-size: 14px;
     margin: 0 17px 0 17px;
     content: '/';
     color: $blue-light;
   }
+
   &:last-child {
     .breadcrumbs__link {
       text-decoration: none;
       pointer-events: none;
     }
+
     &::after {
       display: none;
     }
@@ -30,12 +37,12 @@
 }
 
 .breadcrumbs__link {
-  white-space: nowrap;
-  color: #3F3D56;
-
-  font-weight: 400;
   font-size: 12px;
+  font-weight: 400;
   line-height: 15px;
+  white-space: nowrap;
+  color: #3f3d56;
+
   &:hover {
     text-decoration: none;
   }

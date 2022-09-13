@@ -1,7 +1,7 @@
 /* begin footer__bottom */
 .footer__bottom {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr;
   grid-area: footer-bottom;
   width: 100%;

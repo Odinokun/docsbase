@@ -1,0 +1,190 @@
+extends ../_template
+
+mixin blog-section-header__filter-item(title, num, newclass)
+  div(class='blog-section-header__filter-item ' + newclass + '')
+    .blog-section-header__filter-text #{title}
+    .blog-section-header__filter-num #{num}
+
+mixin newsOne(pic, text)
+  .news-card
+    a(href="#").news-card__img
+      img(src="assets/img/news/news-"+pic+".jpg" alt="img")
+    .news-card__info
+      .news-card__label
+        +svg('label')
+        span company
+      .news-card__label
+        +svg('label')
+        span digital
+      .news-card__date
+        +svg('calendar')
+        span 22.01.2021
+    a(href="#").news-card__title #{text}
+
+block variables
+  - let title       = 'Blog DocsBase'
+  - let description = 'Blog DocsBase'
+
+  - let breadcrumbs = 'Digital'
+
+block content
+  .main-wrap.no-js.light-page
+    include ../sections/header
+    include ../elements/breadcrumbs
+
+    //begin content
+    main.main
+      //BEGIN blog-header
+      header.blog-header
+        .container
+          h1.blog-header__title News & Events
+      //END   blog-header
+
+      //BEGIN blog-top
+      .blog-top
+        .container
+          // begin blog-top__top-news
+          a.blog-top__top-news(href="#" style="background-image:url('assets/img/top-news.jpg')")
+            .blog-top__top-news-descr
+              .blog-top__top-news-header Top News
+              .blog-top__top-news-info
+                .blog-top__top-news-label
+                  +svg('label')
+                  span company
+                .blog-top__top-news-label
+                  +svg('label')
+                  span digital
+                .blog-top__top-news-date
+                  +svg('calendar')
+                  span 03.01.2021
+              h2.blog-top__top-news-title Our Company has developed internal quality control procedures based on the bespoke QC system
+          // end   blog-top__top-news
+
+          // begin blog-top__right
+          .blog-top__right
+            //BEGIN news-card
+            .blog-top__news.news-card
+              a(href="#").news-card__img
+                img(src="assets/img/news/news-01.jpg" alt="img")
+              .news-card__info
+                .news-card__label
+                  +svg('label')
+                  span company
+                .news-card__label
+                  +svg('label')
+                  span digital
+                .news-card__label
+                  +svg('label')
+                  span service
+                .news-card__date
+                  +svg('calendar')
+                  span 22.01.2021
+              a(href="#").news-card__title The way we handle any translation project is the same whether the translation is performed in-house
+            //END   news-card
+
+            //BEGIN news-card
+            .blog-top__news.news-card
+              a(href="#").news-card__img
+                img(src="assets/img/news/news-02.jpg" alt="img")
+              .news-card__info
+                .news-card__label
+                  +svg('label')
+                  span digital
+                .news-card__date
+                  +svg('calendar')
+                  span 20.01.2021
+              a(href="#").news-card__title Our Company has developed internal quality control procedures
+            //END   news-card
+
+          // end   blog-top__right
+
+      //END   blog-top
+
+      //BEGIN blog-section-header
+      .blog-section-header
+        .container
+          h2.blog-section-header__title Latest News
+      //END   blog-section-header
+
+      //BEGIN blog-section
+      .blog-section
+        .container
+          include ../sections/blog-slider
+      //END   blog-section
+
+      //BEGIN blog-section-header
+      .blog-section-header
+        .container
+          h2.blog-section-header__title Popular News
+      //END   blog-section-header
+
+      //BEGIN blog-section
+      .blog-section
+        .container
+          include ../sections/blog-slider
+      //END   blog-section
+
+      //BEGIN blog-section-header
+      .blog-section-header
+        .container
+          h2.blog-section-header__title Other News
+          .blog-section-header__filter
+            .blog-section-header__filter-inn
+              +blog-section-header__filter-item('All', '73', '')
+              +blog-section-header__filter-item('Vacancies', '3', 'active')
+              +blog-section-header__filter-item('Legalisation Services', '14', '')
+              +blog-section-header__filter-item('Languages', '27', '')
+              +blog-section-header__filter-item('Professional Translation', '18', '')
+              +blog-section-header__filter-item('Apostille Services', '11', '')
+
+      //END   blog-section-header
+
+      //BEGIN blog-section-other-news
+      .blog-section-other-news
+        .container
+          .blog-section-other-news__inn
+            .blog-section-other-news__item
+              +newsOne('03', 'Our Company has developed internal quality control procedures based on the bespoke QC system')
+            .blog-section-other-news__item
+              +newsOne('04', 'In addition to translation and localization services, depending on the wishes of the client or the legal requirements that translated')
+            .blog-section-other-news__item
+              +newsOne('05', 'The way we handle any translation project is the same whether the translation is performed in-house')
+            .blog-section-other-news__item
+              +newsOne('06', 'Our Company has developed internal quality control procedures')
+            .blog-section-other-news__item
+              +newsOne('07', 'Our Company has developed internal quality control procedures based on the bespoke QC system')
+            .blog-section-other-news__item
+              +newsOne('08', 'In addition to translation and localization services, depending on the wishes of the client or the legal requirements that translated')
+            .blog-section-other-news__item
+              +newsOne('09', 'The way we handle any translation project is the same whether the translation is performed in-house')
+            .blog-section-other-news__item
+              +newsOne('10', 'Our Company has developed internal quality control procedures')
+            .blog-section-other-news__item
+              +newsOne('11', 'In addition to translation and localization services, depending on the wishes of the client or the legal requirements that translated')
+            .blog-section-other-news__item
+              +newsOne('01', 'The way we handle any translation project is the same whether the translation is performed in-house')
+            .blog-section-other-news__item
+              +newsOne('02', 'Our Company has developed internal quality control procedures')
+            .blog-section-other-news__item
+              +newsOne('09', 'The way we handle any translation project is the same whether the translation is performed in-house')
+            .blog-section-other-news__item
+              +newsOne('10', 'Our Company has developed internal quality control procedures')
+            .blog-section-other-news__item
+              +newsOne('11', 'In addition to translation and localization services, depending on the wishes of the client or the legal requirements that translated')
+            .blog-section-other-news__item
+              +newsOne('01', 'The way we handle any translation project is the same whether the translation is performed in-house')
+            .blog-section-other-news__item
+              +newsOne('02', 'Our Company has developed internal quality control procedures')
+
+      //END   blog-section-other-news
+
+      .blog-section-other-news-more
+        .container
+          .blog-section-other-news-more__btn
+            .blog-section-other-news-more__icon
+              +svg('load')
+            .blog-section-other-news-more__text Load More News
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

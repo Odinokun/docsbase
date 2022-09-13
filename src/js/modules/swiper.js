@@ -1,25 +1,34 @@
-module.exports = function() {
+module.exports = function () {
 
-  const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    // direction: 'vertical',
-    loop: true,
-
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
+  const blogSlider = new Swiper('.blog-slider', {
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
     },
-
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
+    spaceBetween: 20,
+    slidesPerView: 1.1,
+    breakpoints: {
+      375: {
+        spaceBetween: 20,
+        slidesPerView: 1.2,
+      },
+      769: {
+        spaceBetween: 20,
+        slidesPerView: 2.3,
+      },
+      1025: {
+        spaceBetween: 30,
+        slidesPerView: 3,
+      },
+      1400: {
+        spaceBetween: 30,
+        slidesPerView: 4,
+      }
+    }
   });
 
 };
