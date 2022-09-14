@@ -2,7 +2,7 @@
   padding: 10px 0;
 
   @include min(769) {
-    padding: 19px 0;
+    padding: 16px 0;
   }
 }
 
@@ -19,7 +19,7 @@
 
   &::after {
     font-size: 14px;
-    margin: 0 17px 0 17px;
+    margin: 0 19px;
     content: '/';
     color: $blue-light;
   }

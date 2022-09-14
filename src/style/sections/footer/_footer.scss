@@ -1,9 +1,9 @@
 .footer {
-  padding: 60px 0 17px 0;
+  padding: 70px 0 17px 0;
   background-color: $black;
 
   @include min(769) {
-    padding: 85px 0 17px 0;
+    padding: 100px 0 17px 0;
   }
 
   .container {

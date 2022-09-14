@@ -1,5 +1,6 @@
 .logo {
   display: block;
+  flex: none;
 }
 
 .logo__svg {
@@ -10,5 +11,6 @@
 
   @include min(600) {
     width: 170px;
+    max-width: 100%;
   }
 }

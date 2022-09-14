@@ -50,7 +50,7 @@
 .news-card__info {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 4px;
+  margin-bottom: 12px;
 }
 
 .news-card__label,
@@ -111,7 +111,7 @@
 .news-card__title {
   font-family: $font-bold;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.4;
   margin-bottom: 0;
   text-decoration: none;

@@ -144,11 +144,11 @@
   }
 }
 
-
 .blog-top__top-news-title {
   font-family: $font-bold;
-  font-weight: 400;
-  margin-bottom: 0;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 8px;
   color: #fff;
 
   @include responsive-font(28, 24);

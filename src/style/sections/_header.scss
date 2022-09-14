@@ -14,7 +14,11 @@
     margin-right: 16px;
   }
   @include min(769) {
+    margin-right: 24px;
+  }
+  @include min(1400) {
     margin-right: 64px;
+
   }
 }
 
@@ -68,6 +72,7 @@
 
   &:first-child {
     border-left: none;
+    padding-left: 20px;
   }
 
   &:last-child {

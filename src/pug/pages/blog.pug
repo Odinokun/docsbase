@@ -8,7 +8,7 @@ mixin blog-section-header__filter-item(title, num, newclass)
 mixin newsOne(pic, text)
   .news-card
     a(href="#").news-card__img
-      img(src="assets/img/news/news-"+pic+".jpg" alt="img")
+      img(src="assets/img/news/news-" + pic + ".jpg" alt="img")
     .news-card__info
       .news-card__label
         +svg('label')
@@ -160,30 +160,33 @@ block content
             .blog-section-other-news__item
               +newsOne('10', 'Our Company has developed internal quality control procedures')
             .blog-section-other-news__item
+              +newsOne('11', 'Our Company has developed internal quality control procedures based on the bespoke QC system')
+            .blog-section-other-news__item
+              +newsOne('01', 'In addition to translation and localization services, depending on the wishes of the client or the legal requirements that translated')
+            .blog-section-other-news__item
+              +newsOne('02', 'The way we handle any translation project is the same whether the translation is performed in-house')
+            .blog-section-other-news__item
+              +newsOne('09', 'Our Company has developed internal quality control procedures')
+            .blog-section-other-news__item
+              +newsOne('10', 'Our Company has developed internal quality control procedures based on the bespoke QC system')
+            .blog-section-other-news__item
               +newsOne('11', 'In addition to translation and localization services, depending on the wishes of the client or the legal requirements that translated')
             .blog-section-other-news__item
               +newsOne('01', 'The way we handle any translation project is the same whether the translation is performed in-house')
             .blog-section-other-news__item
               +newsOne('02', 'Our Company has developed internal quality control procedures')
-            .blog-section-other-news__item
-              +newsOne('09', 'The way we handle any translation project is the same whether the translation is performed in-house')
-            .blog-section-other-news__item
-              +newsOne('10', 'Our Company has developed internal quality control procedures')
-            .blog-section-other-news__item
-              +newsOne('11', 'In addition to translation and localization services, depending on the wishes of the client or the legal requirements that translated')
-            .blog-section-other-news__item
-              +newsOne('01', 'The way we handle any translation project is the same whether the translation is performed in-house')
-            .blog-section-other-news__item
-              +newsOne('02', 'Our Company has developed internal quality control procedures')
-
       //END   blog-section-other-news
 
+      //BEGIN blog-section-other-news-more
       .blog-section-other-news-more
         .container
           .blog-section-other-news-more__btn
             .blog-section-other-news-more__icon
               +svg('load')
             .blog-section-other-news-more__text Load More News
+      //END   blog-section-other-news-more
+
+      include ../sections/lets-translate
     //end content
 
     include ../sections/footer
