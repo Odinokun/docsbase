@@ -80,7 +80,7 @@
 .blog-slider__slide.swiper-slide-next + .swiper-slide {
   @include min(1025) {
     pointer-events: none;
-    opacity: .3;
+    opacity: .35;
   }
   @include min(1400) {
     pointer-events: auto;
@@ -91,7 +91,7 @@
 .blog-slider__slide.swiper-slide-next + .swiper-slide + .swiper-slide {
   @include min(1400) {
     pointer-events: none;
-    opacity: .3;
+    opacity: .35;
   }
 }
 

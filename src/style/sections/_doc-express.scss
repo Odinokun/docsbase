@@ -1,0 +1,57 @@
+.docexpress {
+  padding-top: 68px;
+  padding-bottom: 50px;
+  background-color: rgba(197, 207, 224, .75);
+
+  @include min(769) {
+    padding-top: 110px;
+    padding-bottom: 88px;
+  }
+}
+
+.docexpress__header {
+  margin-bottom: 80px;
+
+  .container {
+    text-align: center;
+  }
+}
+
+.docexpress__title {
+  font-family: $font-light;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #3f3d56;
+
+  @include responsive-font(48, 38);
+  @include min(769) {
+    line-height: 1.1;
+  }
+}
+
+.docexpress__subtitle {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+  color: #232230;
+}
+
+.docexpress__body {
+  margin-bottom: 50px;
+}
+
+.docexpress__footer {
+  .container {
+    display: flex;
+    justify-content: flex-end;
+
+    @include min(769) {
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+mixin slide(title, price)
+  .doc-slider__slide.swiper-slide
+    .doc-slider__slide-title #{title}
+    .doc-slider__slide-price from #{price} euro
+    button.btn-arr
+      .btn-arr__text Get A Quote Now
+      .btn-arr__icon
+        +svg('arr-right-top')
+
+//BEGIN doc-slider
+.doc-slider
+  .swiper-wrapper
+    +slide('Certified Lithuanian translation of divorce certificate','20')
+    +slide('Arabic Birth Certificate','25')
+    +slide('French Marriage Certificate Translation','30')
+    +slide('Certified Lithuanian translation of divorce certificate','22')
+    +slide('Certified Lithuanian translation of divorce certificate','20')
+    +slide('Arabic Birth Certificate','25')
+    +slide('French Marriage Certificate Translation','30')
+    +slide('Certified Lithuanian translation of divorce certificate','22')
+    +slide('Certified Lithuanian translation of divorce certificate','20')
+    +slide('Arabic Birth Certificate','25')
+    +slide('French Marriage Certificate Translation','30')
+    +slide('Certified Lithuanian translation of divorce certificate','22')
+    +slide('Certified Lithuanian translation of divorce certificate','20')
+    +slide('Arabic Birth Certificate','25')
+    +slide('French Marriage Certificate Translation','30')
+    +slide('Certified Lithuanian translation of divorce certificate','22')
+
+  .swiper-button-prev
+  .swiper-button-next
+  .swiper-scrollbar
+//END   doc-slider

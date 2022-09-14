@@ -12,10 +12,33 @@ module.exports = function () {
     spaceBetween: 20,
     slidesPerView: 1.1,
     breakpoints: {
-      375: {
+      769: {
         spaceBetween: 20,
-        slidesPerView: 1.2,
+        slidesPerView: 2.3,
       },
+      1025: {
+        spaceBetween: 30,
+        slidesPerView: 3,
+      },
+      1400: {
+        spaceBetween: 30,
+        slidesPerView: 4,
+      }
+    }
+  });
+
+  const docSlider = new Swiper('.doc-slider', {
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    spaceBetween: 20,
+    slidesPerView: 1.1,
+    breakpoints: {
       769: {
         spaceBetween: 20,
         slidesPerView: 2.3,

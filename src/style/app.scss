@@ -5,6 +5,7 @@
 @import 'core/base';
 
 //elements
+@import 'elements/btns';
 @import 'elements/logo';
 @import 'elements/menu';
 @import 'elements/burger';
@@ -17,19 +18,22 @@
 
 //section
 @import 'sections/header';
-@import 'sections/blog-slider';
 @import 'sections/lets-translate';
+@import 'sections/doc-express';
 
 @import 'sections/footer/footer';
 @import 'sections/footer/footer-left';
 @import 'sections/footer/footer-right';
 @import 'sections/footer/footer-bottom';
 
+//sliders
+@import 'sliders/blog-slider';
+@import 'sliders/doc-slider';
+
 //pages
 @import 'pages/blog/blog';
 @import 'pages/blog/blog-top';
 @import 'pages/blog/blog-section-header';
-
 
 @import 'pages/index';
 @import 'pages/inner';
