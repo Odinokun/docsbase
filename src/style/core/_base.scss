@@ -164,6 +164,7 @@ svg {
 
 .light-page {
   .header {
+    position: relative;
     border-bottom: 1px solid $blue-light-2;
   }
 
@@ -196,6 +197,11 @@ svg {
   .header__right-item-link-quote {
     color: $dark-blue;
   }
+}
+
+.slider-section {
+  overflow: hidden;
+  margin-bottom: 37px;
 }
 
 //

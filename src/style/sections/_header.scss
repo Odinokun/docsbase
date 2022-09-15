@@ -1,4 +1,9 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
   padding: 18px 0;
   border-bottom: 1px solid transparent;
 
@@ -18,7 +23,6 @@
   }
   @include min(1400) {
     margin-right: 64px;
-
   }
 }
 
@@ -71,8 +75,8 @@
   }
 
   &:first-child {
-    border-left: none;
     padding-left: 20px;
+    border-left: none;
   }
 
   &:last-child {

@@ -18,6 +18,7 @@
 
 //section
 @import 'sections/header';
+@import 'sections/blog-slider-header';
 @import 'sections/lets-translate';
 @import 'sections/doc-express';
 
@@ -31,9 +32,9 @@
 @import 'sliders/doc-slider';
 
 //pages
-@import 'pages/blog/blog';
-@import 'pages/blog/blog-top';
-@import 'pages/blog/blog-section-header';
 
 @import 'pages/index';
+@import 'pages/blog';
+@import 'pages/article';
+
 @import 'pages/inner';

@@ -1,9 +1,9 @@
 extends ../_template
 
-mixin blog-section-header__filter-item(title, num, newclass)
-  div(class='blog-section-header__filter-item ' + newclass + '')
-    .blog-section-header__filter-text #{title}
-    .blog-section-header__filter-num #{num}
+mixin blog-slider-header__filter-item(title, num, newclass)
+  div(class='blog-slider-header__filter-item ' + newclass + '')
+    .blog-slider-header__filter-text #{title}
+    .blog-slider-header__filter-num #{num}
 
 mixin newsOne(pic, text)
   .news-card
@@ -100,44 +100,44 @@ block content
 
       //END   blog-top
 
-      //BEGIN blog-section-header
-      .blog-section-header
+      //BEGIN blog-slider-header
+      .blog-slider-header
         .container
-          h2.blog-section-header__title Latest News
-      //END   blog-section-header
+          h2.blog-slider-header__title Latest News
+      //END   blog-slider-header
 
-      //BEGIN blog-section
-      .blog-section
-        .container
-          include ../sliders/blog-slider
-      //END   blog-section
-
-      //BEGIN blog-section-header
-      .blog-section-header
-        .container
-          h2.blog-section-header__title Popular News
-      //END   blog-section-header
-
-      //BEGIN blog-section
-      .blog-section
+      //BEGIN slider-section
+      .slider-section
         .container
           include ../sliders/blog-slider
-      //END   blog-section
+      //END   slider-section
 
-      //BEGIN blog-section-header
-      .blog-section-header
+      //BEGIN blog-slider-header
+      .blog-slider-header
         .container
-          h2.blog-section-header__title Other News
-          .blog-section-header__filter
-            .blog-section-header__filter-inn
-              +blog-section-header__filter-item('All', '73', '')
-              +blog-section-header__filter-item('Vacancies', '3', 'active')
-              +blog-section-header__filter-item('Legalisation Services', '14', '')
-              +blog-section-header__filter-item('Languages', '27', '')
-              +blog-section-header__filter-item('Professional Translation', '18', '')
-              +blog-section-header__filter-item('Apostille Services', '11', '')
+          h2.blog-slider-header__title Popular News
+      //END   blog-slider-header
 
-      //END   blog-section-header
+      //BEGIN slider-section
+      .slider-section
+        .container
+          include ../sliders/blog-slider
+      //END   slider-section
+
+      //BEGIN blog-slider-header
+      .blog-slider-header
+        .container
+          h2.blog-slider-header__title Other News
+          .blog-slider-header__filter
+            .blog-slider-header__filter-inn
+              +blog-slider-header__filter-item('All', '73', '')
+              +blog-slider-header__filter-item('Vacancies', '3', 'active')
+              +blog-slider-header__filter-item('Legalisation Services', '14', '')
+              +blog-slider-header__filter-item('Languages', '27', '')
+              +blog-slider-header__filter-item('Professional Translation', '18', '')
+              +blog-slider-header__filter-item('Apostille Services', '11', '')
+
+      //END   blog-slider-header
 
       //BEGIN blog-section-other-news
       .blog-section-other-news

@@ -1,3 +1,29 @@
+.blog-header {
+  padding-top: 10px;
+
+  @include min(769) {
+    padding-top: 30px;
+  }
+
+  .container {
+    text-align: center;
+  }
+}
+
+.blog-header__title {
+  font-family: $font-bold;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 56px;
+  color: #232230;
+
+  @include responsive-font(64, 42);
+  @include min(769) {
+    margin-bottom: 60px;
+  }
+}
+
+/* begin TOP NEWS */
 .blog-top {
   margin-bottom: 60px;
 
@@ -8,7 +34,6 @@
   }
 }
 
-/* begin TOP NEWS */
 .blog-top__top-news {
   position: relative;
   display: flex;
@@ -133,7 +158,6 @@
 }
 
 .blog-top__top-news-date {
-  //margin-left: 12px;
   border: 1px solid transparent;
 
   svg {
@@ -154,9 +178,6 @@
   @include responsive-font(28, 24);
 }
 
-/* end   TOP NEWS */
-
-/* begin RIGHT */
 .blog-top__right {
   display: none;
 
@@ -186,4 +207,89 @@
   }
 }
 
-/* end   RIGHT */
+/* end   TOP NEWS */
+
+
+/* begin OTHER NEWS */
+.blog-section-other-news__inn {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @include min(600) {
+    width: calc(100% + 25px);
+  }
+  @include min(1025) {
+    width: calc(100% + 30px);
+  }
+}
+
+.blog-section-other-news__item {
+  width: 100%;
+  margin-bottom: 40px;
+
+  @include min(600) {
+    width: calc(50% - 25px);
+    margin-right: 25px;
+  }
+  @include min(1025) {
+    width: calc(33.33% - 30px);
+    margin-right: 30px;
+    margin-bottom: 74px;
+  }
+  @include min(1400) {
+    width: calc(25% - 30px);
+  }
+}
+
+.blog-section-other-news-more {
+  padding-bottom: 70px;
+
+  @include min(769) {
+    padding-bottom: 100px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.blog-section-other-news-more__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    .blog-section-other-news-more__icon svg {
+      transform: rotate(540deg);
+    }
+  }
+}
+
+.blog-section-other-news-more__icon {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 35px;
+
+  svg {
+    fill: $blue-light;
+    width: 44px;
+    height: 44px;
+    transition: transform .6s;
+  }
+}
+
+.blog-section-other-news-more__text {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1;
+  padding-bottom: 12px;
+  text-align: center;
+  color: #232230;
+  border-bottom: 1px solid #295aa8;
+}
+
+/* end   OTHER NEWS */

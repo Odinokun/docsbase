@@ -1,0 +1,64 @@
+extends ../_template
+
+block variables
+  - let title       = 'Article DocsBase'
+  - let description = 'Article DocsBase'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    //begin content
+    main.main
+      //BEGIN article-top
+      .article-top
+        .container(style="background-image: url('assets/img/bg-article-top.jpg')")
+          .article-top__inn
+            .article-top__title-wrap
+              .article-top__date
+                .news-card__date
+                  +svg('calendar')
+                  span 22.01.2021
+              h1.article-top__title Certified translatoin services –  internal quality control process
+
+              //BEGIN article-top__lables
+              .article-top__lables
+                .news-card__info
+                  .news-card__label
+                    +svg('label')
+                    span company
+                  .news-card__label
+                    +svg('label')
+                    span digital
+                  .news-card__label
+                    +svg('label')
+                    span service
+              //END   article-top__lables
+      //END   article-top
+
+      //BEGIN blog-slider-header
+      //.blog-slider-header
+        .container
+          h2.blog-slider-header__title Latest News
+      //END   blog-slider-header
+
+      //BEGIN slider-section
+      //.slider-section
+        .container
+          include ../sliders/blog-slider
+      //END   slider-section
+
+      //BEGIN blog-section-other-news-more
+      //.blog-section-other-news-more
+        .container
+          .blog-section-other-news-more__btn
+            .blog-section-other-news-more__icon
+              +svg('load')
+            .blog-section-other-news-more__text Load More News
+      //END   blog-section-other-news-more
+
+      //include ../sections/doc-express
+      //include ../sections/lets-translate
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
