@@ -5,6 +5,8 @@ $(function() {
 
   require('./modules/swiper')();
 
+  require('./modules/input-type-file')();
+
   // begin phone mask
   // require('./modules/maskedinput')();
 
