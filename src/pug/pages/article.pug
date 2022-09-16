@@ -105,33 +105,61 @@ block content
               input(type='file').article-sec__download-input
               span.article-sec__download-placeholder Download Template of request for client
               span.article-sec__download-filename
-
-
       //END   article-sec
+        
+      //BEGIN article-banner-sec
+      .article-banner-sec
+        .container
+          .article-banner(style="background-image: url('assets/img/office.jpg')")
+            .article-banner__header
+              span When CTS receives a request from a client, the requested service is logged on to our system with the full details of the request including:
+            .article-banner__footer
+              h2.article-banner__title Book a now and get 10% discount first order
+              button.btn-arr
+                .btn-arr__text Send Request
+                .btn-arr__icon
+                  +svg('arr-right-top')
+      //END   article-banner-sec
+
+      //BEGIN article-social
+      .article-social
+        .container
+          .article-social__quest
+            .article-social__quest-top Do you have a question? <a href="#">Contact Us</a>
+            .article-social__quest-bottom We are ready to answer on any of your questions.
+
+          .article-social__soclist
+            .article-social__soclist-text Like this article? Share it now:
+            .article-social__soclist-links
+              a(href="#" target="_blank" rel="nofollow noopener noreferrer").article-social__soclist-link
+                +svg('fb')
+              a(href="#" target="_blank" rel="nofollow noopener noreferrer").article-social__soclist-link
+                +svg('ln')
+              a(href="#" target="_blank" rel="nofollow noopener noreferrer").article-social__soclist-link
+                +svg('tw')
+              a(href="mailto:info@certifiedtranslations.ie").article-social__soclist-link
+                +svg('email')
+
+      //END   article-social
 
       //BEGIN blog-slider-header
-      //.blog-slider-header
+      .blog-slider-header
         .container
-          h2.blog-slider-header__title Latest News
+          h2.blog-slider-header__title You can also like to read
       //END   blog-slider-header
 
       //BEGIN slider-section
-      //.slider-section
+      .slider-section
         .container
           include ../sliders/blog-slider
       //END   slider-section
 
-      //BEGIN blog-section-other-news-more
-      //.blog-section-other-news-more
+      .article-back-btn
         .container
-          .blog-section-other-news-more__btn
-            .blog-section-other-news-more__icon
-              +svg('load')
-            .blog-section-other-news-more__text Load More News
-      //END   blog-section-other-news-more
-
-      //include ../sections/doc-express
-      //include ../sections/lets-translate
+          button.btn-arr
+            .btn-arr__text Back to all news
+            .btn-arr__icon
+              +svg('arr-right-top')
     //end content
 
     include ../sections/footer

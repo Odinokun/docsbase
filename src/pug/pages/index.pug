@@ -5,29 +5,42 @@ block variables
   - let description = 'DocsBase'
 
 block content
-  .main-wrap.no-js(style="background-color:#014750")
+  .main-wrap.no-js
     include ../sections/header
+
+    //BEGIN index-top
+    .index-top
+      .container
+        .index-top__bg(style="background-image:url('assets/img/bg-video.jpg')")
+          iframe(src="https://player.vimeo.com/video/76979871?background=1&autoplay=1&loop=1&byline=0&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+        .index-top__info
+          h1.index-top__title Translate Anything. <span>Anywhere.</span>
+          .index-top__subtitle Translate documents without leaving home. Certified digital translation with verification by a qualified proofreader
+    //END   index-top
 
     //begin content
     main.main
-      // Slider main container
-      .swiper
-        // Additional required wrapper
-        .swiper-wrapper
-          // Slides
-          .swiper-slide Slide 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, obcaecati!
-          .swiper-slide Slide 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, consectetur delectus laborum officia sint vitae. Adipisci laborum minus quo sit.
-          .swiper-slide Slide 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem dolores ducimus fuga vel! At, enim.
-          |     ...
-        // If we need pagination
-        .swiper-pagination
-        // If we need navigation buttons
-        .swiper-button-prev
-        .swiper-button-next
-        // If we need scrollbar
-        .swiper-scrollbar
+      include ../sections/doc-express
+      //BEGIN blog-slider-header
+      .blog-slider-header
+        .container
+          h2.blog-slider-header__title News
+      //END   blog-slider-header
 
+      //BEGIN slider-section
+      .slider-section
+        .container
+          include ../sliders/blog-slider
+      //END   slider-section
 
+      .article-back-btn
+        .container
+          button.btn-arr
+            .btn-arr__text View All News
+            .btn-arr__icon
+              +svg('arr-right-top')
+
+      include ../sections/lets-translate
     //end content
 
     include ../sections/footer
