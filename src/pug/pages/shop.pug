@@ -1,0 +1,62 @@
+extends ../_template
+
+block variables
+  - let title       = 'Shop DocsBase'
+  - let description = 'Shop DocsBase'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    //begin content
+    main.main
+      //BEGIN shop-top
+      .shop-top
+        .container
+          h2.shop-top__title Our platform to help a make<br>quick translation of your standard documents
+          .shop-top__subtitle Choose from over 40 standard documents in our online service and receive an official translation in no more than 2-3 hours
+
+          //BEGIN shop-top__search-form
+          form.shop-top__search-form
+            .shop-top__search-input
+              label Choose Language
+              select#language-select.shop-top__search-input-select
+                option(selected='selected') Portuguese
+                option Poland
+                option Qatar
+                option Romania
+                option Serbia
+                option Slovakia
+                option Portuguese
+                option Poland
+                option Qatar
+                option Romania
+                option Serbia
+                option Slovakia
+
+            .shop-top__search-input
+              label Type of document
+              select#type-select.shop-top__search-input-select
+                option(selected='selected') All
+                option Document Document Document 1
+                option Document 2
+                option Document 3
+                option Document 4
+                option Document 5
+                option Document 6
+
+            button.shop-top__search-submit
+              +svg('magnify')
+          //END   shop-top__search-form
+      //END   shop-top
+      //BEGIN shop-top__popular
+      .shop-top__popular
+        .container
+          .shop-top__popular-title Most popular documents now:
+          .shop-top__popular-slider-wrap
+            include ../sliders/shop-top-slider
+      //END   shop-top__popular
+
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

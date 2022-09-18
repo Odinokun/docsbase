@@ -3,8 +3,10 @@
 
 $(document).ready(function ($) {
   pageWidget([
+    'index',
     'blog',
     'article',
+    'shop',
     ]);
 });
 

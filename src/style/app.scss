@@ -14,7 +14,6 @@
 
 //@import 'elements/pagination';
 //@import 'elements/popup';
-//@import 'elements/slickBase';
 
 //section
 @import 'sections/header';
@@ -30,11 +29,13 @@
 //sliders
 @import 'sliders/blog-slider';
 @import 'sliders/doc-slider';
+@import 'sliders/shop-top-slider';
 
 //pages
 
-@import 'pages/index';
+@import 'pages/main';
 @import 'pages/blog';
 @import 'pages/article';
+@import 'pages/shop';
 
 @import 'pages/inner';

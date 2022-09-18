@@ -1,0 +1,247 @@
+.shop-top {
+  position: relative;
+  background-color: $blue-1;
+  background-image: url('../img/bg-shop-top.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 160px;
+  }
+}
+
+.shop-top__title {
+  font-family: $font-bold;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 27px;
+  text-align: center;
+  color: #fff;
+
+  @include responsive-font(64, 42);
+}
+
+.shop-top__subtitle {
+  font-family: $font-light;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 76px;
+  text-align: center;
+  color: #fff;
+
+  @include responsive-font(20, 18);
+}
+
+/* begin SEARCH */
+.shop-top__search-form {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 778px;
+  height: 82px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 41px;
+  background-color: #fff;
+
+  @include min(600) {
+    padding: 10px;
+  }
+}
+
+.shop-top__search-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 10px);
+  height: 62px;
+  padding: 5px 10px;
+
+  @include min(600) {
+    padding: 5px 35px;
+    border-radius: 31px;
+    background-color: #f4f7fb;
+  }
+
+  &:first-child {
+    &::before {
+      position: absolute;
+      top: 0;
+      right: -10px;
+      bottom: 0;
+      width: 1px;
+      height: 40px;
+      margin: auto;
+      content: '';
+      background-color: #c4c4c4;
+    }
+  }
+
+  label {
+    font-family: $font-bold;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+    display: block;
+    margin-bottom: 6px;
+    pointer-events: none;
+    color: #232230;
+
+    @include min(600) {
+      left: 35px;
+    }
+  }
+
+  .shop-top__search-input-select + span {
+    font-family: $font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 28px;
+    padding-left: 10px;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    color: #232230;
+    border: none;
+    border-radius: 31px;
+    background-color: transparent;
+
+    @include min(600) {
+      padding-left: 35px;
+    }
+  }
+}
+
+.shop-top__search-input-select-menu {
+  overflow-x: visible !important;
+  max-width: 40vw;
+  max-height: 180px;
+  margin-top: 20px;
+  padding: 10px;
+  user-select: none;
+  border: none !important;
+  border-radius: 15px;
+  background-color: #fff;
+
+  @include min(600) {
+    margin-top: 50px;
+    padding: 0 35px 0 0;
+    border-radius: 5px;
+  }
+
+  &::before {
+    @include min(600) {
+      position: absolute;
+      z-index: -1;
+      top: 20px;
+      left: 0;
+      width: calc(100% + 30px);
+      height: calc(100% + 5px);
+      content: '';
+      border-radius: 30px;
+      background-color: #fff;
+    }
+  }
+
+  .ui-menu-item-wrapper {
+    padding-left: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @include min(600) {
+      padding-left: 35px;
+    }
+  }
+
+  .ui-menu-item {
+    padding-bottom: 5px;
+  }
+
+  .ui-state-active,
+  .ui-widget-content .ui-state-active {
+    color: #232230;
+    border: 1px solid #fff;
+    background: #fff;
+  }
+}
+
+.shop-top__search-submit {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
+  margin: auto;
+  cursor: pointer;
+  border: none;
+  border-radius: 50% !important;
+  background-color: #295aa8;
+
+  svg {
+    fill: #fff;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* end   SEARCH */
+
+
+/* begin slider */
+.shop-top__popular {
+  position: absolute;
+  bottom: -75px;
+  left: 0;
+  width: 100%;
+  min-height: 200px;
+}
+
+.shop-top__popular-slider-wrap {
+  overflow: hidden;
+  padding: 25px 0;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 24px 48px rgba(23, 65, 132, .15);
+
+  @include min(1025) {
+    padding: 25px 15px;
+  }
+}
+
+.shop-top__popular-title {
+  font-family: $font-bold;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  margin-bottom: 19px;
+  color: #f4f7fb;
+}
+
+/* end   slider */

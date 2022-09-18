@@ -54,4 +54,26 @@ module.exports = function () {
     }
   });
 
+  const shopTop = new Swiper('.shop-top-slider', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    spaceBetween: 10,
+    slidesPerView: 1.02,
+    breakpoints: {
+      769: {
+    spaceBetween: 10,
+        slidesPerView: 2.3,
+      },
+      1025: {
+    spaceBetween: 15,
+        slidesPerView: 3,
+      },
+      1400: {
+    spaceBetween: 15,
+        slidesPerView: 4,
+      }
+    }
+  });
 };

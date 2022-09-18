@@ -1,0 +1,23 @@
+mixin slide(title, price)
+  a(href="#").shop-top-slider__slide.swiper-slide
+    .shop-top-slider__slide-pic
+      img(src="assets/img/shop-top-doc.png" alt="document")
+    .shop-top-slider__slide-info
+      .shop-top-slider__slide-title #{title}
+      .shop-top-slider__slide-price from #{price} euro
+
+
+//BEGIN shop-top-slider
+.shop-top-slider
+  .swiper-wrapper
+    +slide('Certified Lithuanian translation of divorce certificate', '20')
+    +slide('Arabic Birth Certificate Translation', '25')
+    +slide('Ukrainian Birth Certificate Translation', '25')
+    +slide('Certified Lithuanian translation of divorce certificate', '20')
+    +slide('Certified Lithuanian translation of divorce certificate', '20')
+    +slide('Arabic Birth Certificate Translation', '25')
+    +slide('Ukrainian Birth Certificate Translation', '25')
+    +slide('Certified Lithuanian translation of divorce certificate', '20')
+  .swiper-button-prev
+  .swiper-button-next
+//END   shop-top-slider
