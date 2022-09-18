@@ -1,0 +1,38 @@
+mixin slide(title, price)
+  .doc-slider__slide
+    .doc-slider__slide-title #{title}
+    .doc-slider__slide-price from #{price} euro
+    button.btn-arr
+      .btn-arr__text Get A Quote Now
+      .btn-arr__icon
+        +svg('arr-right-top')
+
+//BEGIN shop-find
+.shop-find
+  .container
+    .shop-find__title We find <span>11 documents</span>
+    .shop-find__list
+      +slide('Certified Lithuanian translation of divorce certificate','20')
+      +slide('Arabic Birth Certificate','25')
+      +slide('French Marriage Certificate Translation','30')
+
+      .shop-find__banner(style="background-image: url('assets/img/shop-find-banner.jpg')")
+        h3.shop-find__banner-title Get a 10% discount on translation for students
+
+      +slide('Certified Lithuanian translation of divorce certificate','22')
+      +slide('Arabic Birth Certificate','25')
+      +slide('Certified Lithuanian translation of divorce certificate','20')
+      +slide('French Marriage Certificate Translation','30')
+      +slide('Certified Lithuanian translation of divorce certificate','20')
+      +slide('Arabic Birth Certificate','25')
+      +slide('French Marriage Certificate Translation','30')
+
+    //BEGIN shop-find__footer
+    .shop-find__footer
+        .shop-find__footer-btn
+          a(href="#shop-top").scroll-link.shop-find__footer-btn-arr
+            +svg('arr-up')
+          a(href="#shop-top").scroll-link.shop-find__footer-btn-text You have looked at all documents. Go to top
+    //END   shop-find__footer
+//END   shop-find
+

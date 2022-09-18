@@ -5,6 +5,7 @@ $(function() {
   require('./modules/swiper')();
   require('./modules/input-type-file')();
   require('./modules/select')();
+  require('./modules/scroll2ancor')();
 
   // require('./modules/popup')();
 });

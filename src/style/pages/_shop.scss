@@ -1,3 +1,7 @@
+.shop-top-wrap {
+  position: relative;
+}
+
 .shop-top {
   position: relative;
   background-color: $blue-1;
@@ -164,10 +168,10 @@
   }
 
   .ui-menu-item-wrapper {
+    overflow: hidden;
     padding-left: 10px;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;
 
     @include min(600) {
       padding-left: 35px;
@@ -212,8 +216,7 @@
 
 /* end   SEARCH */
 
-
-/* begin slider */
+/* begin POPULAR */
 .shop-top__popular {
   position: absolute;
   bottom: -75px;
@@ -244,4 +247,4 @@
   color: #f4f7fb;
 }
 
-/* end   slider */
+/* end   POPULAR */
