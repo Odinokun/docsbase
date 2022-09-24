@@ -1,5 +1,5 @@
 .consult {
-  background-image: url('../img/bg-consult.jpg');
+  background-color: $blue-1;
   background-repeat: no-repeat;
   background-position: 100% 100%;
   background-size: cover;
@@ -130,6 +130,8 @@
 }
 
 .consult__right {
+  position: relative;
+  display: flex;
   max-width: 100%;
 
   @include min(1200) {
@@ -138,10 +140,41 @@
 }
 
 .consult-img {
+  margin-left: auto;
   padding-top: 20px;
 
   img {
     display: block;
     max-width: 100%;
   }
+}
+
+.consult-right__info {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  padding-right: 20px;
+
+  @include min(600) {
+    bottom: 100px;
+    padding-right: 50px;
+  }
+}
+
+.consult-right__info-name {
+  font-family: $font-bold;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: right;
+  color: #fff;
+}
+
+.consult-right__info-position {
+  font-family: $font;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.4;
+  text-align: right;
+  color: #fff;
 }

@@ -7,6 +7,7 @@ $(document).ready(function ($) {
     'blog',
     'article',
     'shop',
+    'shop-product',
     ]);
 });
 

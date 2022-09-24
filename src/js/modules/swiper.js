@@ -76,4 +76,17 @@ module.exports = function () {
       }
     }
   });
+
+  var swiper = new Swiper(".shop-product__slider--thumb", {
+    spaceBetween: 8,
+    slidesPerView: 4,
+    freeMode: true,
+    direction: "vertical",
+    watchSlidesProgress: true,
+  });
+  var swiper2 = new Swiper(".shop-product__slider--main", {
+    thumbs: {
+      swiper: swiper,
+    },
+  });
 };

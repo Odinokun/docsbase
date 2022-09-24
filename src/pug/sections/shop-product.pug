@@ -1,0 +1,98 @@
+//BEGIN shop-product
+.shop-product
+  .container
+    //BEGIN shop-product__left
+    .shop-product__left
+      .shop-product__left-inn
+        .shop-product__slider-wrap
+          .shop-product__slider.shop-product__slider--thumb.swiper
+            .swiper-wrapper
+              .swiper-slide
+                img(src='assets/img/doc-01.jpg')
+              .swiper-slide
+                img(src='assets/img/doc-02.jpg')
+              .swiper-slide
+                img(src='assets/img/doc-03.jpg')
+          .shop-product__slider.shop-product__slider--main.swiper
+            .swiper-wrapper
+              .swiper-slide
+                img(src='assets/img/doc-01.jpg')
+              .swiper-slide
+                img(src='assets/img/doc-02.jpg')
+              .swiper-slide
+                img(src='assets/img/doc-03.jpg')
+        .shop-product__slider-footer
+          .shop-product__slider-footer-icon
+            +svg('info')
+          .shop-product__slider-footer-text Your document must look like this examles
+    //END   shop-product__left
+
+    //BEGIN shop-product__middle
+    .shop-product__middle
+      h2.shop-product__title Arabic Birth Certificate Translation
+      .shop-product__lables
+        .shop-product__lable birth certificates
+        .shop-product__lable arabic
+      .shop-product__text
+        p.shop-product__text-lg Translations of Arabic to English and English to Arabic documents. While we translate any and every type of Arabic language document, we most routinely translate vital documents, in particular, birth certificates.
+        p.shop-product__text-sm In general, Arabic document translations cost around 25 euro per page, but this can change depending on the complexity of the document. Vital documents like certificates of marriage, divorce and death are completed at 25 euro per page, while medical, financial and IT tend to vary.
+        p.shop-product__text-mid For Arabic speaking people who are planning on working, studying or living in Ireland or the UK, having a translation of your birth certificate is essential. Birth certificate translations virtually always have to be certified and, depending on who you are submitting to, the type of certification can vary. All of our translations are certified, but if you would like a special certification, for instance, by Notary or Solicitor, we can do that as well. We work with Notaries Public and Solicitors every day which means we can offer the most competitive prices in Ireland.
+      h3.shop-product__subtitle How it work?
+      ol.shop-product__list
+        li Send us an e-mail containing as much information as you have about what you would like to have done.
+        li Be sure to include your document as a scan or photo image (a picture from your phone is sufficient)
+        li From this, we can give you an accurate quote and completion time
+        li If it is a translation you require, we can also complete the job via the scan you sent
+        li The hard copy will be posted to you with no additional charge
+      h3.shop-product__subtitle Other services with Document Translation Services
+      .shop-product__text
+        p.shop-product__text-mid We also have a legalisation team that can handle more difficult process like <a href='#'>Apostille</a> or <a href="#">Consular Legalisation</a>. If you have an Irish birth certificate that needs translated for use abroad in an Arabic speaking country, you will need one of these types of legalisation. The country your birth certificate will be submitted to will determine which one you need. If you need legalisation for your Arabic birth certificate, we can also help
+
+    //END   shop-product__middle
+
+    //BEGIN shop-product__right
+    .shop-product__right
+      form.shop-product__right-inn
+        .shop-product__right-header
+          .shop-product__time
+            +svg('clock')
+            span 1-2 days
+          .shop-product__price
+            span Basic price:
+            span 25 euro
+
+        .shop-product__right-item
+          .shop-product__right-item-row
+            .checkbox
+              input(type='checkbox')
+              span
+            .shop-product__right-item-row-text Express translation
+            .shop-product__right-item-row-price +15%
+          .shop-product__right-item-row
+            p We also have an express service in which we translate a vital document in under an hour
+
+        .shop-product__right-item
+          .shop-product__right-item-title Additional options:
+          .shop-product__right-item-row
+            .checkbox
+              input(type='checkbox' checked)
+              span
+            .shop-product__right-item-row-text Sending by postal service
+            .shop-product__right-item-row-price 5 €
+          .shop-product__right-item-row
+            .checkbox
+              input(type='checkbox')
+              span
+            .shop-product__right-item-row-text Extra copy
+            .shop-product__right-item-row-price 5 €
+
+        button.shop-product__right-order
+          +svg('cart')
+          span.shop-product__right-order-text Order now
+          span.shop-product__right-order-price 30 €
+
+        .shop-product__right-help
+          img(src="assets/img/logo-mini.svg" alt="DocsBase")
+          span Need help? <a href="#">Contact Us</a>
+    //END   shop-product__right
+//END   shop-product
