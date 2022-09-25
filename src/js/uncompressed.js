@@ -8,6 +8,7 @@ $(document).ready(function ($) {
     'article',
     'shop',
     'shop-product',
+    'payment-options',
     ]);
 });
 

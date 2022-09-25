@@ -1,0 +1,70 @@
+extends ../_template
+
+mixin checkbox(img, title, text)
+  .payment-options__form-row-checkbox
+    input(type='radio' name='payment')
+    .payment-options__form-row-checkbox-bg
+    .payment-options__form-row-checkbox-info
+      .payment-options__form-row-checkbox-img
+        img(src="assets/img/" + img + ".svg" alt="img")
+      .payment-options__form-row-checkbox-title #{title}
+      .payment-options__form-row-checkbox-text #{text}
+
+block variables
+  - let title       = 'Shop DocsBase'
+  - let description = 'Shop DocsBase'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    //begin content
+    main.main
+      .payment-options
+        .payment-options__item
+          h2.payment-options__title Payment options
+          form.payment-options__form
+            //BEGIN payment-options__form-row
+            .payment-options__form-row
+              .payment-options__form-row-title
+                span 1
+                span Fill out the form
+              .payment-options__form-row-inputs
+                .payment-options__form-row-input
+                  input(placeholder='Name')
+                  span Name
+                .payment-options__form-row-input
+                  input(placeholder='Surname')
+                  span Surname
+                .payment-options__form-row-input.payment-options__form-row-input--price
+                  input(placeholder='Price')
+                  span Price
+            //END   payment-options__form-row
+
+            //BEGIN payment-options__form-row
+            .payment-options__form-row
+              .payment-options__form-row-title
+                span 2
+                span Choose your payment method:
+
+              //BEGIN payment-options__form-row-checkboxes
+              .payment-options__form-row-checkboxes
+                //BEGIN payment-options__form-row-checkbox
+                +checkbox('visa', 'Debit / Credit Card', 'Stripe is the faster and safer way to send money worldwide. We accept all major Credit and Debit Cards.')
+                //END   payment-options__form-row-checkbox
+                //BEGIN payment-options__form-row-checkbox
+                +checkbox('transfer', 'Bank Transfer', 'Make your payment directly into our bank account. Please use your name as the payment reference and save a payment confirmation.')
+                //END   payment-options__form-row-checkbox
+                //BEGIN payment-options__form-row-checkbox
+                +checkbox('revolut', 'Revolut', 'Revolut Pay is a convenient and fast payment method available to the customers holding a personal or business Revolut account.')
+                //END   payment-options__form-row-checkbox
+              //END   payment-options__form-row-checkboxes
+            //END   payment-options__form-row
+
+            //BEGIN payment-options__form-row
+            .payment-options__form-row
+              button.payment-options__form-submit
+                span Submit
+                +svg('cart')
+            //END   payment-options__form-row
+    //end content
+    include ../sections/scripts

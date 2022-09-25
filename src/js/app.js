@@ -6,6 +6,7 @@ $(function() {
   require('./modules/input-type-file')();
   require('./modules/select')();
   require('./modules/scroll2ancor')();
+  require('./modules/input-placeholder')();
 
   // require('./modules/popup')();
 });
