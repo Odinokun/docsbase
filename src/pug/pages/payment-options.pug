@@ -62,9 +62,10 @@ block content
 
             //BEGIN payment-options__form-row
             .payment-options__form-row
-              button.payment-options__form-submit
+              button.payment-options__form-submit.popup-open(data-popup='popup-confirm')
                 span Submit
                 +svg('cart')
             //END   payment-options__form-row
     //end content
+    include ../elements/popup
     include ../sections/scripts

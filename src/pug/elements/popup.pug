@@ -1,17 +1,31 @@
 //begin popup
-.popup__layer
-.popup
+.popup__layer#popup__layer
+.popup#popup-confirm
   .popup__close
     +svg('close')
   .popup__header
-    h2.popup__title Write Review
+    h2.popup__title Confirmation
   .popup__body
-    // begin schedule-item__form
-    form.popup__form
-        input(name='name' placeholder='Your Name').popup__form-input.input
-        input(name='email' placeholder='Email').popup__form-input.input
-        textarea(placeholder='Your review').popup__form-textarea.textarea
-        .popup__form-submit.btn
-          input(type='submit' value='send')
-    // begin schedule-item__form
+    .popup__items
+      .popup__item
+        .popup__item-placeholder Name
+        .popup__item-text Dmytro
+      .popup__item
+        .popup__item-placeholder Surname
+        .popup__item-text Traveler
+
+    .popup__info
+      .popup__info-row
+        .popup__info-row-item Amount:
+        .popup__info-row-item 30 €
+      .popup__info-row
+        .popup__info-row-item Credit card commission:
+        .popup__info-row-item 3.5 %
+
+    .popup__info.popup__info--total
+      .popup__info-row
+        .popup__info-row-item Total:
+        .popup__info-row-item 32.55 €
+
+    button.popup__btn Confirm
 //end popup
