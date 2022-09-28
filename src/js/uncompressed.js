@@ -10,6 +10,7 @@ $(document).ready(function ($) {
     'shop-product',
     'payment-options',
     // 'payment',
+    'thank-you',
     ]);
 });
 

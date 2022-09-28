@@ -1,0 +1,32 @@
+extends ../_template
+
+block variables
+  - let title       = 'Blog DocsBase'
+  - let description = 'Blog DocsBase'
+
+  - let breadcrumbs = 'Get a quote'
+
+block content
+  .main-wrap.no-js.light-page
+    include ../sections/header
+    include ../elements/breadcrumbs
+
+    //begin content
+    main.main
+      //BEGIN thank-you
+      .thank-you
+        .container
+          .thank-you__icon
+            +svg('check')
+          h2.thank-you__title Thank you!
+          .thank-you__subtitle Our manager will study your application and reply to you as soon as possible.<br>Thank you for contacting our company.
+          a(href="/").thank-you__back-link
+            .thank-you__back-link-icon
+              +svg('arr-left-top')
+            span Go back to home page
+
+      //END   thank-you
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

@@ -1,0 +1,99 @@
+.thank-you {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    text-align: center;
+
+    @include min(1025) {
+      padding-top: 80px;
+      padding-bottom: 120px;
+    }
+  }
+}
+
+.thank-you__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  margin-bottom: 20px;
+  background-image: url('../img/rounds.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+
+  svg {
+    fill: #174184;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.thank-you__title {
+  font-family: $font-bold;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #295aa8;
+
+  @include responsive-font(64, 42);
+}
+
+.thank-you__subtitle {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 19px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #3f3d56;
+}
+
+.thank-you__back-link {
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    span {
+      border-color: transparent;
+    }
+  }
+
+  span {
+    font-family: $font;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1;
+    padding: 12px 0 10px 0;
+    transition: $transition;
+    text-align: center;
+    white-space: nowrap;
+    color: #232230;
+    border-bottom: 1px solid #295aa8;
+  }
+}
+
+.thank-you__back-link-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-color: #295aa8;
+
+  svg {
+    fill: #fff;
+    width: 6px;
+    height: 6px;
+  }
+}
