@@ -9,6 +9,7 @@ $(document).ready(function ($) {
     'shop',
     'shop-product',
     'payment-options',
+    // 'payment',
     ]);
 });
 

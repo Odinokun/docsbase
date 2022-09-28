@@ -68,6 +68,10 @@
   @include min(769) {
     margin-bottom: 60px;
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .payment-options__form-row-title {

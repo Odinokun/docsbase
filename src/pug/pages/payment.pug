@@ -1,0 +1,44 @@
+extends ../_template
+
+block variables
+  - let title       = 'Shop DocsBase'
+  - let description = 'Shop DocsBase'
+
+block content
+  .main-wrap.no-js
+    //begin content
+    main.main
+      .payment
+        //BEGIN payment__item-left
+        .payment__item-left
+          .payment__item-left-header
+            a(href="#").payment__item-left-header-link
+              +svg('arr-left-top')
+              span Go back to payment choice
+          .payment__item-left-body
+            .payment__item-left-body-item
+              span Pay your Invoice
+              span 32.55 €
+          .payment__item-left-footer
+            .payment__item-left-footer-item
+              span Make on platform
+              a(href="#")
+            .payment__item-left-footer-item
+              a(href="#") Terms of use
+            .payment__item-left-footer-item
+              a(href="#") Privacy Policy
+
+        //END   payment__item-left
+
+        //BEGIN payment__item-right
+        .payment__item-right
+          h2.payment__title Cart payment
+          form.payment__form
+            .payment__form-row
+              button.payment__form-submit.popup-open
+                span Pay
+                +svg('cart')
+        //END   payment__item-right
+    //end content
+
+    include ../sections/scripts
