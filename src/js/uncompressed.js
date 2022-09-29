@@ -11,6 +11,7 @@ $(document).ready(function ($) {
     'payment-options',
     // 'payment',
     'thank-you',
+    'about',
     ]);
 });
 
