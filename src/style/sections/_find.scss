@@ -1,14 +1,14 @@
 .find-section {
-  padding-bottom: 70px;
-
-  @include min(1025) {
-    padding-bottom: 100px;
-  }
-
   .container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-bottom: 70px;
+    border-bottom: 1px solid #dedede;
+
+    @include min(1025) {
+      padding-bottom: 100px;
+    }
   }
 }
 

@@ -63,15 +63,15 @@ module.exports = function () {
     slidesPerView: 1.02,
     breakpoints: {
       769: {
-    spaceBetween: 10,
+        spaceBetween: 10,
         slidesPerView: 2.3,
       },
       1025: {
-    spaceBetween: 15,
+        spaceBetween: 15,
         slidesPerView: 3,
       },
       1400: {
-    spaceBetween: 15,
+        spaceBetween: 15,
         slidesPerView: 4,
       }
     }
@@ -88,6 +88,22 @@ module.exports = function () {
   const shopProductMain = new Swiper(".shop-product__slider--main", {
     thumbs: {
       swiper: shopProductThumb,
+    },
+  });
+
+  const reviewsSlider = new Swiper('.reviews-slider', {
+    spaceBetween: 20,
+    grabCursor: true,
+    slidesPerView: 'auto',
+    freeMode: true,
+    freeModeMomentum: false,
+    loop: true,
+    speed: 4000,
+    mousewheelControl: true,
+    keyboardControl: true,
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: true
     },
   });
 

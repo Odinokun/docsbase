@@ -1,0 +1,37 @@
+mixin slide(pic)
+  .reviews-card
+    .reviews-card__img
+      img(src="assets/img/reviews/review-" + pic + ".jpg" alt="img")
+
+//BEGIN reviews-slider
+.reviews-slider
+  .swiper-wrapper
+    .reviews-slider__slide.swiper-slide
+      +slide('01')
+    .reviews-slider__slide.swiper-slide
+      +slide('02')
+    .reviews-slider__slide.swiper-slide
+      +slide('03')
+    .reviews-slider__slide.swiper-slide
+      +slide('04')
+    .reviews-slider__slide.swiper-slide
+      +slide('05')
+    .reviews-slider__slide.swiper-slide
+      +slide('06')
+    .reviews-slider__slide.swiper-slide
+      +slide('07')
+    .reviews-slider__slide.swiper-slide
+      +slide('06')
+    .reviews-slider__slide.swiper-slide
+      +slide('05')
+    .reviews-slider__slide.swiper-slide
+      +slide('01')
+    .reviews-slider__slide.swiper-slide
+      +slide('07')
+    .reviews-slider__slide.swiper-slide
+      +slide('02')
+    .reviews-slider__slide.swiper-slide
+      +slide('03')
+    .reviews-slider__slide.swiper-slide
+      +slide('04')
+//END   reviews-slider

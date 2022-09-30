@@ -1,0 +1,36 @@
+//BEGIN reviews
+.reviews
+  .container
+    .reviews__header
+      h2.reviews__title We are trusted, from 2006
+      .reviews__subtitle We’re proud to work with some of the biggest brands in Ireland, and the smaller ones too, and we always go the extra mile for our clients. <br>      If you would like to find out about special offers and discounts for corporate clients, our Dublin-based business advisors are more than happy to help.
+    //BEGIN reviews__body
+    .reviews__body
+      .reviews__counters
+        //BEGIN reviews__counter
+        .reviews__counter
+          .reviews__counter-number.countTo(data-from="0" data-to="124" data-speed="2000" data-refresh-interval="10")
+          .reviews__counter-descr Companies, corporations, state companies
+          .reviews__counter-footer
+            .reviews__counter-footer-img
+              img(src="assets/img/counter-logos.png" alt="logos")
+        //END   reviews__counter
+
+        //BEGIN reviews__counter
+        .reviews__counter
+          .reviews__counter-number.countTo(data-from="0" data-to="24856" data-speed="2000" data-refresh-interval="10")
+          .reviews__counter-descr People’s
+          .reviews__counter-footer.reviews__counter-footer--google
+            .reviews__counter-footer-google
+              .reviews__counter-footer-google-img
+                img(src="assets/img/google-icon.svg" alt="google")
+              .reviews__counter-footer-google-rait 4.9
+              button.reviews__counter-footer-google-link.btn-arr
+                .btn-arr__text 567 отзывов на Google
+                .btn-arr__icon
+                  +svg('arr-right-top')
+        //END   reviews__counter
+    //END   reviews__body
+
+    include ../sliders/reviews-slider
+//END   reviews

@@ -1,0 +1,22 @@
+mixin tag(title)
+  li.tags__item
+    a(href="#").tags__link
+      span #{title}
+      +svg('arr-right-top')
+
+//BEGIN tags
+.tags
+  .container
+    .tags__left
+      h2.tags__title You can also interested:
+    .tags__right
+      ul.tags__list
+        +tag('Financial and Corporate Translation Services in Dublin and Ireland')
+        +tag('Document Preparation in Dublin and Ireland')
+        +tag('General Prices')
+        +tag('How to Receive Translated Documents - Ireland')
+        +tag('Proofreading Services in Dublin and Ireland')
+        +tag('Apostille Services in Dublin and Ireland')
+        +tag('Legal Translation Services in Dublin and Ireland')
+        +tag('Companies Registration Office Certification and Documents')
+//END   tags
