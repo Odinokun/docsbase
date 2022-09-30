@@ -1,9 +1,10 @@
 module.exports = function () {
 
-    let counter = 0;
-    let elements = $('.reviews__counter-number');
+  let counter = 0;
+  let elements = $('.reviews__counter-number');
 
-    $(window).on('scroll', function () {
+  $(window).on('scroll', function () {
+    if ($(elements).length > 0) {
       let scroll = $(window).scrollTop() + $(window).height();
       //Если скролл до конца елемента
       // let offset = $element.offset().top + $element.height();
@@ -15,7 +16,8 @@ module.exports = function () {
         $(elements).countTo();
         // counter = 1;
       }
-    });
+    }
+  });
 
   // $('.countTo').countTo();
 };

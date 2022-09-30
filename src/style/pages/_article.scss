@@ -101,6 +101,13 @@
   span {
     color: $blue-1;
   }
+    a {
+      color: $blue-1;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
 }
 
 /* end   ARTICLE HEADER */

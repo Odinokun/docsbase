@@ -9,26 +9,26 @@
     padding-top: 130px;
     padding-bottom: 130px;
     text-align: center;
-    background-color: $blue-1;
-    background-image: url('../img/bg-about.jpg');
+    //background-color: $blue-1;
+    //background-image: url('../img/bg-about.jpg');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
 
-    &::before {
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      margin: auto;
-      content: '';
-      background-image: url('../img/filter-article-top.png');
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: cover;
-    }
+    //&::before {
+    //  position: absolute;
+    //  z-index: -1;
+    //  top: 0;
+    //  right: 0;
+    //  bottom: 0;
+    //  left: 0;
+    //  margin: auto;
+    //  content: '';
+    //  background-image: url('../img/filter-article-top.png');
+    //  background-repeat: no-repeat;
+    //  background-position: 50% 50%;
+    //  background-size: cover;
+    //}
   }
 }
 

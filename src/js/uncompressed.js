@@ -12,6 +12,7 @@ $(document).ready(function ($) {
     // 'payment',
     'thank-you',
     'about',
+    'team',
     ]);
 });
 

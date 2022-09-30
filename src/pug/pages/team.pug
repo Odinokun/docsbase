@@ -1,0 +1,79 @@
+extends ../_template
+
+block variables
+  - let title       = 'Blog DocsBase'
+  - let description = 'Blog DocsBase'
+
+  - let breadcrumbs = 'About our team'
+
+  - let letsTranslate = 'Get a quote now'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../elements/breadcrumbs
+
+    //begin content
+    main.main
+      //BEGIN about-top
+      .about-top
+        .container(style='background-color:#232230; background-image:url("assets/img/bg-team.jpg")')
+          h2.about-top__title About our team
+          .about-top__descr Your expert linguists and project managers are dedicated to putting your <br> satisfaction above all else.
+      //END   about-top
+
+      //BEGIN article-header
+      .article-header.second
+        .container
+          h2.article-header__title Our professional team introduction of  the tailor-made <a href="#">Translation Management system developed by our IT, our bookings, tracking and invoicing</a> arrangements have become fully automated. This allows our clients full access via the independent client login and enables them to fully monitor existing projects, agreed deadlines and costs, budgets and financial data.
+      //END   article-header
+
+      //BEGIN article-sec
+      .article-sec
+        .container
+          .article-sec__item
+            h3.article-sec__title List of the internal quality controls applied to ensure overall quality of service delivery
+          .article-sec__item
+            h4.article-sec__subtitle Competence and Qualification controls over:
+            ul.article-sec__list
+              li translators
+              li proof-readers
+              li Independent reviewers
+              li project Managers
+            h4.article-sec__subtitle Translation Quality controls are the following:
+            ul.article-sec__list
+              li grammar and content flow check
+              li consistency controls
+              li target language quality control
+              li accuracy control
+              li style &              flow control
+              li formatting control
+              li translation completion control
+              li references to published documents and quotation control
+            .article-sec__text-sm
+              p A translation request is received by CTS – this may be by fax, email, FTP, OTM, post or by hand (CTS are completely flexible and have the technology to accept documents in any format).
+              p A Translation Project Manager is assigned to the enquiry based on their experience, content, type of client and language pair involved.
+      //END   article-sec
+
+      //BEGIN team-banner
+      .team-banner-section
+        .container
+          .team-banner
+            .team-banner__left
+              h2.team-banner__title Be a part of our team
+              .team-banner__subtitle Docsbase is a specialized translation company focused on certified document translations, as well as notary and legalisation services.
+              .team-banner__text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            .team-banner__right(style='background-image:url("assets/img/chair.png")')
+              button.team-banner__footer-link.btn-arr
+                .btn-arr__text Contact Us
+                .btn-arr__icon
+                  +svg('arr-right-top')
+      //END   team-banner
+
+      include ../sections/find-section
+      include ../sections/tags
+
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
