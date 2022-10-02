@@ -13,6 +13,7 @@ $(document).ready(function ($) {
     'thank-you',
     'about',
     'team',
+    'process',
     ]);
 });
 

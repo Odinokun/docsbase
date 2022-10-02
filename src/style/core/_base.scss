@@ -82,10 +82,19 @@ ul {
   }
 }
 
-ul {
+ul.checkbox-list {
+  margin: 0 0 40px 0;
+  padding: 0 0 0 25px;
+
   li {
-    // путь к кастомной картинке пункта ul
-    // list-style-image: url('../img/ul.png');
+    font-family: $font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-bottom: 16px;
+    padding-left: 12px;
+    list-style-image: url('../img/ul.svg');
+    color: #3f3d56;
   }
 }
 
@@ -267,35 +276,31 @@ svg {
 }
 
 .main .second {
-  background-color: #fff;
   position: relative;
   margin-top: -80px;
   padding-top: 40px;
   border-radius: 60px 60px 0 0;
+  background-color: #fff;
 
   @include min(769) {
-    padding-top: 80px;
-    border-radius: 80px 80px 0 0;
+    padding-top: 70px;
   }
 }
 
-//.btn {
-//  font-family: $font, sans-serif;
-//  font-size: 18px;
-//  line-height: 1;
-//  display: inline-flex;
-//  justify-content: center;
-//  align-items: center;
-//  height: 46px;
-//  padding: 16px 24px;
-//  cursor: pointer;
-//  user-select: none;
-//  white-space: nowrap;
-//  text-decoration: none;
-//  color: $black;
-//  border-width: 2px;
-//  border-style: solid;
-//  border-color: $black;
-//  border-radius: 25px !important;
-//  box-shadow: none;
-//}
+.btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1;
+  width: 100%;
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #f4f7fb;
+  border: none;
+  background-color: #295aa8;
+  box-shadow: none;
+}

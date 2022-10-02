@@ -1,0 +1,30 @@
+mixin capabilities__counter-wrap(percent, title, descr)
+  .capabilities__counter-wrap
+    .capabilities__counter.circle_percent(data-percent= percent)
+      .capabilities__counter-inner.circle_inner
+        .capabilities__counter-round-per.round_per
+    .capabilities__counter-title #{title}
+    .capabilities__counter-descr #{descr}
+
+//BEGIN capabilities-wrap
+.capabilities-wrap
+  .container
+    .capabilities
+      h2.capabilities__title Our capabilities
+      .capabilities__descr See our services and pricing options in more detail
+      //BEGIN capabilities__counters
+      .capabilities__counters
+        .capabilities-slider
+          .swiper-wrapper
+            .capabilities-slider__slide.swiper-slide
+              +capabilities__counter-wrap('86', 'Specialised translations', 'The translation of highly specialised content, including certification.')
+            .capabilities-slider__slide.swiper-slide
+              +capabilities__counter-wrap('96', 'Certified translation', 'Translation of personal documents and official legal translations including full certification')
+            .capabilities-slider__slide.swiper-slide
+              +capabilities__counter-wrap('75', 'Localization services', 'The translation of highly specialised content, including certification.')
+            .capabilities-slider__slide.swiper-slide
+              +capabilities__counter-wrap('86', 'Legalisation services', 'Apostille, visa, consular, embassy and notarial services, as well as fully certified translation')
+
+          .swiper-pagination
+      //END   capabilities__counters
+//END   capabilities-wrap

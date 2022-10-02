@@ -14,7 +14,7 @@ module.exports = function () {
 
       if (scroll > offset && counter === 0) {
         $(elements).countTo();
-        // counter = 1;
+        counter = 1;
       }
     }
   });

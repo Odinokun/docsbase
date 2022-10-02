@@ -77,6 +77,29 @@ module.exports = function () {
     }
   });
 
+  const capabilitiesSlider = new Swiper('.capabilities-slider', {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    spaceBetween: 20,
+    slidesPerView: 1,
+    breakpoints: {
+      600: {
+        spaceBetween: 20,
+        slidesPerView: 2,
+      },
+      769: {
+        spaceBetween: 20,
+        slidesPerView: 3,
+      },
+      1025: {
+        spaceBetween: 20,
+        slidesPerView: 4,
+      }
+    }
+  });
+
   const shopProductThumb = new Swiper(".shop-product__slider--thumb", {
     spaceBetween: 8,
     slidesPerView: 4,

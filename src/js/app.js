@@ -8,4 +8,5 @@ $(function() {
   require('./modules/input-placeholder')();
   require('./modules/popup')();
   require('./modules/countTo')();
+  require('./modules/progress-counter')();
 });

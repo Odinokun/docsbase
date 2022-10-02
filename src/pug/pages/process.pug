@@ -1,0 +1,63 @@
+extends ../_template
+
+block variables
+  - let title       = 'Process DocsBase'
+  - let description = 'Process DocsBase'
+
+  - let breadcrumbs = 'Process'
+
+  - let letsTranslate = 'Let\'s translate it now'
+
+mixin diagram__item(num, icon, text)
+  .diagram__item
+    .diagram__item-number #{num}
+    .diagram__item-inn
+      .diagram__item-icon
+        svg
+            use(xlink:href="assets/img/sprite.svg#" + icon)
+      .diagram__item-text #{text}
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../elements/breadcrumbs
+
+    //begin content
+    main.main
+      //BEGIN about-top
+      .about-top
+        .container(style='background-color:#232230; background-image:url("assets/img/bg-progress.jpg")')
+          h2.about-top__title Process
+          .about-top__descr From start to finish, our translation process is like a journey. Collaboration, communication <br>and a shared vision are essential. At the company's office or online from anywhere in the world. From any device. <br>Send us your document and we'll do the rest.
+      //END   about-top
+
+      //BEGIN process-second
+      .process-second
+        .process-second__decor
+          .process-second__decor-icon
+            +svg('stopwatch')
+        .container
+          .process-second__uptitle  Over 90% of our work <br> is completed ahead of schedule!
+          h2.process-second__title How we do it?
+          .process-second__descr We believe that our success is down to our personalised approach to the needs of every customer, as well as our dedication to thorough quality assessment.
+      //END   process-second
+
+      include ../sections/diagram
+
+      //BEGIN Swiss banner
+      .swiss-banner-wrap
+        .container
+          .swiss-banner
+            .swiss-banner__info
+              h2.swiss-banner__title And, of course – Swiss Quality on all stages
+              .swiss-banner__subtitle Our Irish teams use a thorough system of checks and quality control procedures developed by our Swiss office. This system has been implemented in Dublin, Cork, and all of our international offices to ensure that our service is of the highest quality.
+      //END   Swiss banner
+      include ../sections/rates
+      include ../sections/capabilities
+      include ../sections/lets-translate
+      include ../sections/tags
+
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
