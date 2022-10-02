@@ -1,11 +1,12 @@
 .header {
   position: absolute;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
   padding: 18px 0;
   border-bottom: 1px solid transparent;
+  background-color: transparent;
 
   .container {
     display: flex;

@@ -9,4 +9,5 @@ $(function() {
   require('./modules/popup')();
   require('./modules/countTo')();
   require('./modules/progress-counter')();
+  require('./modules/map')();
 });

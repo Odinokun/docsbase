@@ -14,6 +14,7 @@ $(document).ready(function ($) {
     'about',
     'team',
     'process',
+    'contacts',
     ]);
 });
 

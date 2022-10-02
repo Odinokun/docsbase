@@ -1,0 +1,41 @@
+extends ../_template
+
+block variables
+  - let title       = 'Blog DocsBase'
+  - let description = 'Blog DocsBase'
+
+  - let breadcrumbs = 'Contacts'
+
+  - let letsTranslate = 'Get a quote now'
+
+block content
+  .main-wrap.no-js.light-page
+    include ../sections/header
+    include ../elements/breadcrumbs
+
+    //begin content
+    main.main
+      //BEGIN map-section
+      .map-section
+        .map-section__header
+          .container
+            h2.map-section__title Contact us
+            .map-section__descr To speak to one of our Dublin-based advisers, <br>or to find out how to contact one of your international offices
+        .map-section__footer
+          .container
+            .map-section__footer-info
+              +svg('info')
+              span Tap on map to get contacts of our team around the world
+
+        .map-section__inn
+          include ../elements/map
+
+        include ../elements/popup-maps
+      //END   map-section
+
+      include ../sections/lets-translate
+      include ../sections/reviews
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

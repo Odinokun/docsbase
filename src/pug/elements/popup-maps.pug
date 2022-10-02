@@ -1,0 +1,28 @@
+mixin country-popup(id, title)
+  //begin country-popup
+  div(class='country-popup' id='country-popup-' + id)
+    .country-popup__close
+      +svg('close')
+    .country-popup__header
+      h2.country-popup__title #{title}
+      .country-popup__subtitle Swiss Center for Quality Control and Verification of Document Translations.
+
+    .country-popup__address Alpenstrasse 4 – CH – 6004 Luzern
+    a(href="#" target="_blank" rel="nofollow noopener noreferrer").country-popup__address-link
+      +svg('marker')
+      span View on map
+    a(href="tel:+41414106166").country-popup__contacts-link
+      .country-popup__contacts-link-icon
+        +svg('phone')
+      span +41 414 106 166
+    a(href="mailto:info@certifiedtranslations.ie").country-popup__contacts-link
+      .country-popup__contacts-link-icon
+        +svg('mail')
+      span info@certifiedtranslations.ie
+  //end country-popup
+
+//-.popup__layer#popup__layer
+
++country-popup('01', 'Greenland')
++country-popup('02', 'Canada')
++country-popup('03', 'USA')
