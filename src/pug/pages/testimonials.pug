@@ -1,0 +1,68 @@
+extends ../_template
+
+block variables
+  - let title       = 'Blog DocsBase'
+  - let description = 'Blog DocsBase'
+
+  - let breadcrumbs = 'Testimonials'
+
+  - let letsTranslate = 'Let\'s translate it now'
+
+mixin testimonials-review__row(icon, title, text)
+  li.testimonials-review__row
+    .testimonials-review__item.testimonials-review__item--01
+      div(class="testimonials-review__ava testimonials-review__ava--" + icon)
+        img(src="assets/img/ava-" + icon + ".svg" alt="avatar")
+
+    .testimonials-review__item.testimonials-review__item--02
+      span.testimonials-review__title #{title}
+      span.testimonials-review__date
+        +svg('calendar')
+        span FROM 2015
+
+    .testimonials-review__item.testimonials-review__item--03
+      p #{text}
+
+block content
+  .main-wrap.no-js.light-page
+    include ../sections/header
+    include ../elements/breadcrumbs
+
+    //begin content
+    main.main
+      .testimonials__header
+        .container
+          h2.testimonials__header-title Testimonials
+          .testimonials__header-descr We value your feedback. Please share your thoughts.
+          a(href="#").testimonials__header-btn.btn-arr
+            .btn-arr__text Write a review
+            .btn-arr__icon
+              +svg('arr-right-top')
+
+
+      //BEGIN testimonials-review
+      .testimonials-review
+        .container
+          ul.testimonials-review__list
+            +testimonials-review__row('01', 'Law agencies', 'Grow your sales and distribution numbers. Virtual SaaS Products, consumer services, or tangible hardware alike, we’ll help you attune your solutions’ messaging to individualized market audiences, capturing the excitement and attention of local users. We work with Apple, Youtube, Google, Intel, Bank of Ireland and etc.')
+            +testimonials-review__row('02', 'Game Industry', 'Grow your sales and distribution numbers. Virtual SaaS Products, consumer services, or tangible hardware alike, we’ll help you attune your solutions’ messaging to individualized market audiences, capturing the excitement and attention of local users. We work with Apple, Youtube, Google, Intel, Bank of Ireland and etc.')
+            +testimonials-review__row('03', 'Web studies', 'We have been using Docsbase Translation and Consular Services for over two years now and they have been a great help and extremely professional, handling our Canadian and USA projects.')
+            +testimonials-review__row('01', 'Law agencies', 'Grow your sales and distribution numbers. Virtual SaaS Products, consumer services, or tangible hardware alike, we’ll help you attune your solutions’ messaging to individualized market audiences, capturing the excitement and attention of local users. We work with Apple, Youtube, Google, Intel, Bank of Ireland and etc.')
+            +testimonials-review__row('02', 'Game Industry', 'Grow your sales and distribution numbers. Virtual SaaS Products, consumer services, or tangible hardware alike, we’ll help you attune your solutions’ messaging to individualized market audiences, capturing the excitement and attention of local users. We work with Apple, Youtube, Google, Intel, Bank of Ireland and etc.')
+            +testimonials-review__row('03', 'Web studies', 'We have been using Docsbase Translation and Consular Services for over two years now and they have been a great help and extremely professional, handling our Canadian and USA projects.')
+
+          .testimonials-review__footer
+            a(href="#header").testimonials-review__footer-link.scroll-link
+              .testimonials-review__footer-link-icon
+                +svg('arr-up')
+              .testimonials-review__footer-link-text You have looked at all reviews. Go to top
+      //END   testimonials-review
+
+      include ../sections/reviews
+      include ../sections/balls
+      include ../sections/testimonials-list
+      include ../sections/lets-translate
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

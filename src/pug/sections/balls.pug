@@ -1,0 +1,22 @@
+mixin ball(year, title)
+  div(class='ball-wrap ball-wrap--' + year)
+    div(class='ball ball--' + year)
+      .ball__inn
+        .ball__year #{year}
+        .ball__title #{title}
+
+//BEGIN balls-section
+.balls-section
+  .container
+    .balls-section__text Docsbase is <span>the first in the digitalization of the translation process</span>. We open a new era in translations – everything happens online and is stored in the cloud. We use the <a href="#">digital translation standard, which is accepted all over the world</a>. Our innovations will allow you to save time, money, and, most importantly, to receive high-quality translations online.
+
+    //BEGIN balls
+    .balls
+      +ball('2007', 'Docsbase company born in the small town of Lucerne, Switzerland')
+      +ball('2010', '200+ translators work in the team of high qualifications')
+      +ball('2018', 'Offices in USA, Switzerland, CIS, Canada, Germany and more 10+ countries')
+      +ball('2020', 'Introduced AI technologies for the translations that made them fast and affordable for customers – from anywhere in the world for a very reasonable price')
+      +ball('2022', 'We first created professional translate service, working online and legalized worldwide')
+    //END   balls
+
+//END   balls-section

@@ -15,6 +15,7 @@ $(document).ready(function ($) {
     'team',
     'process',
     'contacts',
+    'testimonials',
     ]);
 });
 

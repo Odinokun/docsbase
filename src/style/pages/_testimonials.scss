@@ -1,0 +1,268 @@
+/* begin TESTIMONIALS HEADER */
+.testimonials__header {
+  margin-bottom: 50px;
+
+  .container {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+}
+
+.testimonials__header-title {
+  font-family: $font-bold;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 0;
+  color: #232230;
+
+  @include responsive-font(64, 42);
+}
+
+.testimonials__header-descr {
+  font-family: $font-bold;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-left: auto;
+  color: #3f3d56;
+}
+
+.testimonials__header-btn {
+  margin-left: 40px;
+}
+
+/* end   TESTIMONIALS HEADER */
+
+
+/* begin TESTIMONIALS REVIEW */
+
+.testimonials-review {
+  padding-bottom: 70px;
+  border-bottom: 1px solid #c5cfe0;
+
+  @include min(600) {
+    padding-bottom: 120px;
+  }
+}
+
+.testimonials-review__list {
+  width: 100%;
+  margin: 0 0 40px 0;
+  padding: 0;
+  list-style: none;
+
+  @include min(600) {
+    margin: 0 0 70px 0;
+  }
+}
+
+.testimonials-review__row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 0;
+  border-bottom: 1px solid #c5cfe0;
+
+  @include min(600) {
+    padding: 40px 0 50px 0;
+  }
+
+  &:first-child {
+    border-top: 1px solid #c5cfe0;
+  }
+}
+
+/* begin 01 */
+.testimonials-review__item--01 {
+  flex: none;
+  width: 100%;
+  margin-bottom: 25px;
+
+  @include min(600) {
+    width: 120px;
+    margin-bottom: 0;
+  }
+  @include min(1025) {
+    width: 25%;
+  }
+}
+
+.testimonials-review__ava--01 {
+  img {
+    display: block;
+    max-width: 30px;
+    max-height: 30px;
+  }
+}
+
+.testimonials-review__ava--02 {
+  overflow: hidden;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+
+  @include min(600) {
+    width: 82px;
+    height: 82px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-position: center;
+    object-fit: cover;
+  }
+}
+
+.testimonials-review__ava--03 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f4f7fb;
+
+  @include min(600) {
+    width: 80px;
+    height: 80px;
+  }
+
+  img {
+    max-width: 20px;
+    max-height: 20px;
+
+    @include min(600) {
+      max-width: 24px;
+      max-height: 24px;
+    }
+  }
+}
+
+/* end   01 */
+
+/* begin 02 */
+.testimonials-review__item--02 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include min(600) {
+    width: calc(100% - 120px);
+  }
+  @include min(1025) {
+    width: 25%;
+  }
+}
+
+.testimonials-review__title {
+  font-family: $font-bold;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 41px;
+  margin-bottom: 20px;
+  color: #232230;
+}
+
+.testimonials-review__date {
+  display: flex;
+
+  svg {
+    flex: none;
+    fill: #c5cfe0;
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+  }
+
+  span {
+    font-family: $font;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0;
+    text-transform: uppercase;
+    color: #c5cfe0;
+  }
+}
+
+/* end   02 */
+
+/* begin 03 */
+.testimonials-review__item--03 {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  width: 100%;
+  padding-top: 25px;
+  color: #232230;
+
+  @include min(1025) {
+    width: 50%;
+    padding-top: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+/* end   03 */
+
+/* begin footer */
+.testimonials-review__footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.testimonials-review__footer-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonials-review__footer-link-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 30px;
+  border: 1px solid #c5cfe0;
+  border-radius: 50%;
+
+  svg {
+    fill: $blue-1;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.testimonials-review__footer-link-text {
+  font-family: $font;
+  font-weight: 300;
+  line-height: 1.2;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  color: #232230;
+
+  @include responsive-font(17, 14);
+
+  &::before {
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 1px;
+    content: '';
+    background-color: #295aa8;
+  }
+}
+
+/* end   footer */
+
+/* end   TESTIMONIALS REVIEW */
