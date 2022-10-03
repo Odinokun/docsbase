@@ -1,0 +1,104 @@
+extends ../_template
+
+block variables
+  - let title       = 'Blog DocsBase'
+  - let description = 'Blog DocsBase'
+
+  - let breadcrumbs = 'Get a Quote'
+
+mixin quote-form__body(active, type)
+  div(class="quote-form__body " + active id="quote-form__body-" + type)
+    .quote-form__input-row
+      .quote-form__input-row-item
+        input(placeholder='Name')
+      .quote-form__input-row-item
+        input(placeholder='Surname')
+    .quote-form__input-row
+      .quote-form__input-row-item
+        input(placeholder='Email')
+      .quote-form__input-row-item
+        input(placeholder='Phone')
+    //BEGIN input-tabs
+    div(class='quote-form__tabs' id='quote-form__tabs--' + type)
+      .quote-form__tabs-header
+        .quote-form__tabs-header-item.quote-form__tabs-header-item--attached.active(data-tab='attached')
+          span Attached files
+        .quote-form__tabs-header-item.quote-form__tabs-header-item--weblink(data-tab='weblink')
+          span Web link
+
+      .quote-form__tabs-body.quote-form__tabs-body--attached.active
+        //BEGIN attach
+        .quote-form__tabs-body-item.quote-form__tabs-body-item--attached
+          input(type='file')
+          .quote-form__tabs-body-item-placeholder
+            .quote-form__tabs-body-item-placeholder-inn
+              span File not selected
+              +svg('attached')
+          .quote-form__tabs-body-item-filename
+        //END   attach
+
+      .quote-form__tabs-body.quote-form__tabs-body--weblink
+        //BEGIN link
+        .quote-form__tabs-body-item.quote-form__tabs-body-item--weblink
+          .quote-form__tabs-body-item-input
+            input(placeholder='www...')
+            +svg('link')
+        //END   link
+    //END   input-tabs
+
+    .quote-form__title Quote description
+    .quote-form__subtitle Please, describe your enquiry adding important details: completion time, delivery options, etc
+    textarea.quote-form__textarea(placeholder='Your message')
+    .quote-form__footer
+      .quote-form__footer-item
+        .quote-form__footer-capcha
+          img(src="assets/img/capcha.jpg" alt="")
+      .quote-form__footer-item
+        button.btn Send a qoute
+
+block content
+  .main-wrap.no-js.light-page
+    include ../sections/header
+    include ../elements/breadcrumbs
+
+    //begin content
+    main.main
+      //BEGIN quote
+      .quote
+        .container
+          //BEGIN quote__header
+          .quote__header
+            h2.quote__title Get a quote
+            .quote__descr Customers! Please describe your enquiry giving as much relevant information as possible. <br>            If the file is too big or is in a different format - please email your query to: info@certifiedtranslations.ie
+            .quote__info
+              +svg('info')
+              span Don’t forget to include your contact details: Phone, Email etc.
+          //END   quote__header
+
+          //BEGIN quote__form
+          .quote__form.quote-form
+            .quote-form__title Choose type of request:
+
+            .quote-form__header
+              .quote-form__header-item.active(data-tab="private")
+                +svg('user')
+                span Private client
+              .quote-form__header-item(data-tab="business")
+                +svg('briefcase')
+                span Business client
+
+            +quote-form__body('active', 'private')
+            +quote-form__body('', 'business')
+
+
+            //BEGIN PRIVATE
+
+            //END   PRIVATE
+
+
+          //END   quote__form
+      //END   quote
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
