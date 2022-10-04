@@ -17,6 +17,7 @@ $(document).ready(function ($) {
     'contacts',
     'testimonials',
     'quote',
+    'business',
     ]);
 });
 

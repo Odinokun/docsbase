@@ -1,0 +1,74 @@
+mixin slide(text)
+  .swiper-slide.our-guarantee-slide
+    | #{text}
+
+//BEGIN our-guarantee
+.our-guarantee
+  .container
+    h2.our-guarantee__title Our Guarantee:
+
+    .our-guarantee__body
+      //BEGIN our-guarantee__tabs
+      .our-guarantee__tabs
+        .our-guarantee__tabs-list
+          .our-guarantee__tabs-item.active(data-tab='01') Latest technologies
+          .our-guarantee__tabs-item(data-tab='02') Licenses and QA standards
+          .our-guarantee__tabs-item(data-tab='03') Hight quality
+          .our-guarantee__tabs-item(data-tab='04') We’re trusted
+      //END   our-guarantee__tabs
+
+      //BEGIN our-guarantee__sliders
+      .our-guarantee__sliders
+        //BEGIN our-guarantee__slider-wrap
+        .our-guarantee__slider-wrap#our-guarantee__slider-wrap--01.active
+          .our-guarantee-slider
+            .swiper-wrapper
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+              +slide('Lorem Ipsum is simply dummy text been the the, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centur')
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+            .swiper-button-prev
+            .swiper-button-next
+        //END   our-guarantee__slider-wrap
+
+        //BEGIN our-guarantee__slider-wrap
+        .our-guarantee__slider-wrap#our-guarantee__slider-wrap--02
+          .our-guarantee-slider
+            .swiper-wrapper
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+              +slide('Lorem Ipsum is simply dummy text been the the, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centur')
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+            .swiper-button-prev
+            .swiper-button-next
+        //END   our-guarantee__slider-wrap
+
+        //BEGIN our-guarantee__slider-wrap
+        .our-guarantee__slider-wrap#our-guarantee__slider-wrap--03
+          .our-guarantee-slider
+            .swiper-wrapper
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+              +slide('Lorem Ipsum is simply dummy text been the the, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centur')
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+            .swiper-button-prev
+            .swiper-button-next
+        //END   our-guarantee__slider-wrap
+
+        //BEGIN our-guarantee__slider-wrap
+        .our-guarantee__slider-wrap#our-guarantee__slider-wrap--04
+          .our-guarantee-slider
+            .swiper-wrapper
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+              +slide('Lorem Ipsum is simply dummy text been the the, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centur')
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+            .swiper-button-prev
+            .swiper-button-next
+        //END   our-guarantee__slider-wrap
+      //END   our-guarantee__sliders
+//END   our-guarantee

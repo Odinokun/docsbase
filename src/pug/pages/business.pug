@@ -1,0 +1,73 @@
+extends ../_template
+
+block variables
+  - let title       = 'DocsBase'
+  - let description = 'DocsBase'
+
+mixin item(icon, title)
+  li.business-second__item
+    a(href="#").business-second__item-link
+      .business-second__item-icon
+        svg
+          use(xlink:href="assets/img/sprite.svg#" + icon)
+      .business-second__item-footer
+        .business-second__item-title #{title}
+        .business-second__item-arr
+          +svg('arr-right-top')
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    //begin content
+    main.main
+      //BEGIN business
+      .business
+        //BEGIN business-top
+        .business-top
+          .business-top__item
+          .business-top__item
+            .business-top__item-inn
+              .business-top__above-title Specialised Translation Service for your Business Growth
+              h2.business-top__title Complex linguistic projects for corporate, government and public clients.
+              .business-top__descr Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              a(href="#business-second").business-top__btn.scroll-link
+                +svg('arr-down-lg')
+        //END   business-top
+
+        //BEGIN business-second
+        .business-second#business-second
+          .container
+            .business-second__text Globalize your business efforts! Reach the world! We’ve helped countless businesses do this already, and now we are ready to help you. Select your industry, and find out how we can revolutionize your growth across the globe!
+            .business-second__double
+              .business-second__double-item Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              .business-second__double-item Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            ul.business-second__list
+              +item('bu-01', 'IT and Ecommerce')
+              +item('bu-02', 'Government Services')
+              +item('bu-03', 'Business and Corporate')
+              +item('bu-04', 'Legal translations')
+              +item('bu-05', 'Financial translations')
+              +item('bu-06', 'Hospitality & Travel Translations')
+              +item('bu-07', 'Industrial &Manufacturing Services')
+              +item('bu-08', 'Public Sector Services')
+              +item('bu-09', 'Charity and Non Profit organizations')
+
+        //END   business-second
+
+        include ../sections/our-guarantee
+        include ../sections/our-resources
+        include ../sliders/trusted-slider
+        
+        //BEGIN business-feedback
+        .business-feedback
+          .container
+            .business-feedback__item
+              .business-feedback__title Shall we talk about your project?
+            .business-feedback__item
+              .business-feedback__btn Get a quote now
+        //END   business-feedback
+      //END   business
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

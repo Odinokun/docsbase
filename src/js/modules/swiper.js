@@ -130,5 +130,28 @@ module.exports = function () {
     },
   });
 
+  const guarantySlider = new Swiper('.our-guarantee-slider', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    slidesPerView: 1,
+  });
+
+  const trustedSlider = new Swiper('.trusted-slider', {
+    spaceBetween: 20,
+    grabCursor: true,
+    slidesPerView: 'auto',
+    freeMode: true,
+    freeModeMomentum: false,
+    loop: true,
+    speed: 4000,
+    mousewheelControl: true,
+    keyboardControl: true,
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: true
+    },
+  });
 
 };

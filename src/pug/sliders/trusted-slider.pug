@@ -1,0 +1,32 @@
+mixin slide(img)
+  .trusted-slider__slide-img
+    img(src="assets/img/logos/logo-" + img + ".svg" alt="img")
+//BEGIN trusted-slider-wrap
+.trusted-slider-wrap
+  .container
+    h3.trusted-slider__title Trusted by:
+    .trusted-slider
+      .swiper-wrapper
+        .trusted-slider__slide.swiper-slide
+          +slide('01')
+        .trusted-slider__slide.swiper-slide
+          +slide('02')
+        .trusted-slider__slide.swiper-slide
+          +slide('03')
+        .trusted-slider__slide.swiper-slide
+          +slide('04')
+        .trusted-slider__slide.swiper-slide
+          +slide('05')
+        .trusted-slider__slide.swiper-slide
+          +slide('06')
+        .trusted-slider__slide.swiper-slide
+          +slide('07')
+        .trusted-slider__slide.swiper-slide
+          +slide('08')
+        .trusted-slider__slide.swiper-slide
+          +slide('09')
+        .trusted-slider__slide.swiper-slide
+          +slide('10')
+        .trusted-slider__slide.swiper-slide
+          +slide('11')
+//END   trusted-slider-wrap

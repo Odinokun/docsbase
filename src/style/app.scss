@@ -32,6 +32,8 @@
 @import 'sections/capabilities';
 @import 'sections/balls';
 @import 'sections/testimonials-list';
+@import 'sections/our-guarantee';
+@import 'sections/our-resources';
 
 @import 'sections/footer/footer';
 @import 'sections/footer/footer-left';
@@ -42,6 +44,7 @@
 @import 'sliders/blog-slider';
 @import 'sliders/doc-slider';
 @import 'sliders/shop-top-slider';
+@import 'sliders/trusted-slider';
 
 //pages
 @import 'pages/main';
@@ -57,5 +60,6 @@
 @import 'pages/contacts';
 @import 'pages/testimonials';
 @import 'pages/quote';
+@import 'pages/business';
 
 @import 'pages/inner';

@@ -41,4 +41,16 @@ module.exports = function () {
     $('.quote-form__tabs-body--weblink').fadeIn(0);
   }
 
+
+  //  OUR GUARANTEE
+  $('.our-guarantee__tabs-item').on('click', function () {
+    const activeVal = $(this).data('tab');
+
+    $('.our-guarantee__tabs-item').removeClass('active');
+    $(' .our-guarantee__slider-wrap').fadeOut(0);
+
+    $(this).addClass('active');
+    $('#our-guarantee__slider-wrap--' + activeVal).fadeIn();
+  })
+
 };

@@ -199,13 +199,14 @@
   justify-content: center;
   align-items: center;
   width: 175px;
-  background-size: contain;
   height: 65px;
   cursor: pointer;
   background-repeat: no-repeat;
+  background-size: contain;
+
   @include min(600) {
-  height: 60px;
-  width: 195px;
+    width: 195px;
+    height: 60px;
     background-size: initial;
   }
 
@@ -213,9 +214,9 @@
     padding: 8px 20px 24px 10px;
     background-image: url('../img/input-tab-left-disabled.png');
     background-position: 0 0;
-    @include min(600) {
-    padding: 11px 40px 21px 30px;
 
+    @include min(600) {
+      padding: 11px 40px 21px 30px;
     }
 
     &.active {
@@ -226,13 +227,14 @@
   }
 
   &:nth-child(2) {
+    margin-left: -10px;
     padding: 8px 10px 24px 10px;
     background-image: url('../img/input-tab-right-disabled.png');
     background-position: 0 1px;
-    margin-left: -10px;
+
     @include min(600) {
       margin-left: 0;
-    padding: 11px 30px 21px 30px;
+      padding: 11px 30px 21px 30px;
     }
 
     &.active {
@@ -269,13 +271,14 @@
   justify-content: center;
   align-items: center;
   min-height: 150px;
+  margin-top: -20px;
   padding: 20px;
   border: 1px solid #c5cfe0;
   border-radius: 4px;
   background-color: #fff;
-    margin-top: -20px;
+
   @include min(600) {
-  margin-top: -10px;
+    margin-top: -10px;
   }
 }
 
