@@ -2,8 +2,6 @@
   position: fixed;
   z-index: 99;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
   overflow: auto;
   width: 100%;
@@ -11,7 +9,7 @@
   margin: auto;
   padding: 80px 10px 10px 10px;
   transition: $transition;
-  transform: translate(0);
+  transform: translateY(-120vh);
   pointer-events: none;
   opacity: 0;
   background-color: #232230;
@@ -31,7 +29,7 @@
   }
 
   &.active {
-    transform: translate(1);
+    transform: translateY(0);
     pointer-events: auto;
     opacity: 1;
   }

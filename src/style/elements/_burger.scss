@@ -22,6 +22,20 @@ $burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 
     }
   }
 }
+.header.fixed{
+  .burger__label {
+    color: $burger-color;
+
+    &::before,
+    &::after {
+      background: $burger-color;
+    }
+
+    &::after {
+      filter: drop-shadow(0 $burger-item-shadow $burger-color);
+    }
+  }
+}
 
 .burger {
   position: relative;
