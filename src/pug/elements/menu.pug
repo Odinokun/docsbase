@@ -12,7 +12,9 @@ mixin item3(title)
   li.menu__item-3
     a(href="#").menu__link-3 #{title}
 
+//BEGIN MENU
 nav.menu#menu
+  //BEGIN menu__list
   ul.menu__list
     li.menu__item
       +item('Service')
@@ -56,3 +58,18 @@ nav.menu#menu
       +item('Legalization')
     li.menu__item
       +item('About Us')
+  //END   menu__list
+
+  //BEGIN menu__social
+  .menu__social
+    a(href="tel:+").menu__social-link
+      +svg('phone')
+    a(href="#").menu__social-link
+      +svg('chat')
+    a(href="mailto:").menu__social-link
+      +svg('mail')
+    a(href="#" target="_blank" rel="nofollow noopener noreferrer").menu__social-link
+      +svg('like')
+  //END   menu__social
+
+//END   MENU
