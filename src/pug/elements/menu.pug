@@ -1,12 +1,58 @@
-nav.menu
-  //ul.menu__list
+mixin item(title)
+  a(href="#").menu__link
+    //.menu__link-close
+    span #{title}
+    +svg('arr-right-top')
+
+mixin item2(title)
+  a(href="#").menu__link-2
+    span #{title}
+
+mixin item3(title)
+  li.menu__item-3
+    a(href="#").menu__link-3 #{title}
+
+nav.menu#menu
+  ul.menu__list
     li.menu__item
-      a(href="#").menu__link About
+      +item('Service')
+      ul.menu__list-2
+        li.menu__item-2
+          +item2('Translation Services')
+          ul.menu__list-3
+            +item3('Business Translations')
+            +item3('Contract Translations')
+            +item3('Document Legalisation')
+            +item3('Engineering Translations')
+            +item3('Interpreting Service')
+            +item3('Legal Translation Service')
+            +item3('Medical Translations')
+            +item3('Official Translations')
+            +item3('Patent Translations')
+            +item3('Technical Translations')
+            +item3('Website Localisation')
+        li.menu__item-2
+          +item2('Other Services')
+          ul.menu__list-3
+            +item3('Business Translations')
+            +item3('Contract Translations')
+        li.menu__item-2
+          +item2('Document Legalisation')
+          ul.menu__list-3
+            +item3('Business Translations')
+            +item3('Contract Translations')
+            +item3('Document Legalisation')
+            +item3('Engineering Translations')
+        li.menu__item-2
+          +item2('Reissue and Request of Documents')
+          ul.menu__list-3
+            +item3('Business Translations')
+            +item3('Contract Translations')
     li.menu__item
-      a(href="#").menu__link How it work
+      +item('Languages')
     li.menu__item
-      a(href="#").menu__link Pricing
+      +item('Translations')
     li.menu__item
-      a(href="#").menu__link Our sponsors
+      +item('Legalization')
     li.menu__item
-      a(href="#").menu__link Contact
+      +item('About Us')

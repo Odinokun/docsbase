@@ -11,4 +11,5 @@ $(function() {
   require('./modules/progress-counter')();
   require('./modules/map')();
   require('./modules/tabs')();
+  require('./modules/menu')();
 });

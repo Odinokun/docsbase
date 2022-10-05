@@ -1,16 +1,22 @@
 .header {
   position: absolute;
-  z-index: 10;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
   padding: 18px 0;
+  transition: .5s;
   border-bottom: 1px solid transparent;
   background-color: transparent;
 
   .container {
     display: flex;
     align-items: center;
+  }
+
+  &.fixed {
+    position: fixed;
+    background-color: #232230;
   }
 }
 
@@ -56,6 +62,7 @@
 .header__right {
   display: flex;
   align-items: center;
+  min-width: 50%;
   margin-left: auto;
 }
 
