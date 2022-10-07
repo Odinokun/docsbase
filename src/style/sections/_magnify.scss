@@ -156,7 +156,10 @@
   align-items: center;
   max-width: 330px;
   margin: auto;
-  //margin: 0 auto;
+
+  @include min(769) {
+    margin: 0;
+  }
 }
 
 .magnify__footer-icon {

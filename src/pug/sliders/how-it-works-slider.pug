@@ -1,0 +1,86 @@
+mixin slide(icon, title, text)
+  .how-it-works__slide
+    .how-it-works__slide-item
+      .how-it-works__slide-icon
+        svg
+            use(xlink:href="assets/img/sprite.svg#how-it-works-" + icon)
+      .how-it-works__slide-title #{title}
+      .how-it-works__slide-text #{text}
+    .how-it-works__slide-item
+      .how-it-works__slide-item-img
+        img(src="assets/img/how-it-01.png" alt="img")
+
+
+//BEGIN blog-slider
+.how-it-works-slider
+  .swiper-wrapper
+    .swiper-slide
+      //BEGIN slide 01
+      .how-it-works__slide
+        .how-it-works__slide-item
+          .how-it-works__slide-icon
+            +svg('how-it-works-01')
+          .how-it-works__slide-title Upload Your Document
+          .how-it-works__slide-text Take a photo of the document with a smartphone or use a scanned copy and upload to our service
+        .how-it-works__slide-item
+          .how-it-works__slide-item-img.how-it-works__slide-item-img--01
+            img(src="assets/img/how-it-01.svg" alt="img")
+      //END   slide 01
+
+    .swiper-slide
+      //BEGIN slide 02
+      .how-it-works__slide
+        .how-it-works__slide-item
+          .how-it-works__slide-icon
+            +svg('how-it-works-02')
+          .how-it-works__slide-title Receive Your Quote in Minutes
+          .how-it-works__slide-text ???? Choose a translation language from 120 available and pay for the order in a convenient way
+        .how-it-works__slide-item
+          .how-it-works__slide-item-img.how-it-works__slide-item-img--02
+            img(src="assets/img/how-it-02.svg" alt="img")
+      //END   slide 02
+
+    .swiper-slide
+      //BEGIN slide 03
+      .how-it-works__slide
+        .how-it-works__slide-item
+          .how-it-works__slide-icon
+            +svg('how-it-works-03')
+          .how-it-works__slide-title Confirm Order and Pay
+          .how-it-works__slide-text Choose a translation language from 120 available and pay for the order in a convenient way
+        .how-it-works__slide-item
+          .how-it-works__slide-item-img.how-it-works__slide-item-img--03
+            img(src="assets/img/how-it-03.svg" alt="img")
+      //END   slide 03
+
+    .swiper-slide
+      //BEGIN slide 04
+      .how-it-works__slide
+        .how-it-works__slide-item
+          .how-it-works__slide-icon
+            +svg('how-it-works-04')
+          .how-it-works__slide-title Let us do the Magic
+          .how-it-works__slide-text Translation is carried out in 2 stages: first, the document is translated by artificial intelligence, then it is checked by a professional translator. Within 24 hours the document is available in the cloud – you get access (link with password)
+        .how-it-works__slide-item
+          .how-it-works__slide-item-img.how-it-works__slide-item-img--04
+            img(src="assets/img/how-it-04.svg" alt="img")
+      //END   slide 04
+
+    .swiper-slide
+      //BEGIN slide 05
+      .how-it-works__slide
+        .how-it-works__slide-item
+          .how-it-works__slide-icon
+            +svg('how-it-works-05')
+          .how-it-works__slide-title And voila! Check your inbox
+          .how-it-works__slide-text The digital translation standard is accepted all over the world. QR code for quick reading, PDF format to download/print a copy, as well as the original, which we will send by post.
+          button.how-it-works__slide-btn.btn-arr
+            .btn-arr__text Get A Quote Now
+            .btn-arr__icon
+              +svg('arr-right-top')
+        .how-it-works__slide-item
+          .how-it-works__slide-item-img.how-it-works__slide-item-img--05
+            img(src="assets/img/how-it-05.svg" alt="img")
+      //END   slide 05
+  .swiper-pagination
+//END   blog-slider

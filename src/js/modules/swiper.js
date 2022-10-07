@@ -154,4 +154,32 @@ module.exports = function () {
     },
   });
 
+  const howItWorksSlider = new Swiper('.how-it-works-slider', {
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    spaceBetween: 20,
+    slidesPerView: 1.1,
+    mousewheel: {
+      invert: false,
+      releaseOnEdges: true,
+      // sensitivity:10,
+      // thresholdDelta:10,
+      // thresholdTime:10,
+    },
+    breakpoints: {
+      769: {
+        direction: 'vertical',
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        spaceBetween: 0,
+        slidesPerView: 1,
+        // mousewheel: true,
+      }
+    }
+  });
+
 };
