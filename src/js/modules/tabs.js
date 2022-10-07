@@ -53,4 +53,16 @@ module.exports = function () {
     $('#our-guarantee__slider-wrap--' + activeVal).fadeIn();
   })
 
+  //  MAGNIFY
+
+  $('.magnify__tab').on('click', function () {
+    const activeVal = $(this).data('tab');
+
+    $('.magnify__tab').removeClass('active');
+    $('.magnify__item-img').fadeOut(0);
+
+    $(this).addClass('active');
+    $('#magnify__item-img--' + activeVal).fadeIn();
+  })
+
 };

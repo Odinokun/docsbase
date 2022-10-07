@@ -175,9 +175,9 @@ svg {
 
 .light-page {
   .header {
-    background-color: #fff;
     position: relative;
     border-bottom: 1px solid $blue-light-2;
+    background-color: #fff;
   }
 
   .header__icon {
@@ -276,9 +276,13 @@ svg {
   }
 }
 
+.main {
+  border-radius: 60px 60px 0 0;
+}
+
 .main .second {
   position: relative;
-  margin-top: -80px;
+  //margin-top: -80px;
   padding-top: 40px;
   border-radius: 60px 60px 0 0;
   background-color: #fff;

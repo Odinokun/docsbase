@@ -12,4 +12,5 @@ $(function() {
   require('./modules/map')();
   require('./modules/tabs')();
   require('./modules/menu')();
+  require('./modules/magnify')();
 });
