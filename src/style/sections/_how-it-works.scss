@@ -1,6 +1,6 @@
 .how-it-works {
-  padding-bottom: 70px;
   position: relative;
+  padding-bottom: 70px;
 
   @include min(769) {
     padding-bottom: 120px;
@@ -38,12 +38,12 @@
 
 .how-it-works__swipe {
   position: absolute;
+  z-index: 1;
   right: 20px;
   bottom: 52px;
-pointer-events: none;
-  z-index: 1;
   display: flex;
   align-items: center;
+  pointer-events: none;
 
   @include min(769) {
     display: none;
