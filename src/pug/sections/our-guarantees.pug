@@ -1,0 +1,34 @@
+mixin slide(text)
+  .swiper-slide.our-guarantees-slide
+    | #{text}
+
+//BEGIN our-guarantees
+.our-guarantees
+  .container
+    h2.our-guarantees__title Our Guarantee:
+
+    .our-guarantees__body
+      //BEGIN our-guarantees__tabs
+      .our-guarantees__tabs
+        .our-guarantees__tabs-list.swiper-wrapper
+          .our-guarantees__tabs-item.swiper-slide Latest technologies
+          .our-guarantees__tabs-item.swiper-slide Licenses and QA standards
+          .our-guarantees__tabs-item.swiper-slide High quality
+          .our-guarantees__tabs-item.swiper-slide We’re trusted
+      //END   our-guarantees__tabs
+
+      //BEGIN our-guarantees__sliders
+      .our-guarantees__sliders
+        //BEGIN our-guarantees__slider-wrap
+        .our-guarantees__slider-wrap
+          .our-guarantees-slider
+            .swiper-wrapper
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+              +slide('Lorem Ipsum is simply dummy text been the the, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centur')
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+              +slide('We are using cutting edge latest technologies: Artificial intelligence and Translation Memories software to enable us to save time and costs, but still we are using talented translators to finalize our work ..')
+            .swiper-button-prev
+            .swiper-button-next
+        //END   our-guarantees__slider-wrap
+      //END   our-guarantees__sliders
+//END   our-guarantees

@@ -13,18 +13,24 @@
           li.magnify__tab(data-tab='03') Each translations has a unique QR code, which contains all the information
         .magnify__footer
           .magnify__footer-icon
-            img(src="assets/img/clock.svg" alt="icon")
+            include ../elements/clock
           .magnify__footer-text
             span I don't have time to explore the site.
             a(href="#") How much is my translation cost?
       .magnify__item
         .magnify__item-img#magnify__item-img--01.active
-          .magnify__item-img-inn
-            img.light-zoom(src='assets/img/doc-zoom-01.jpg')
+          .magnify__item-img-decor.pulse-blue(style="top: -10px; left: -10px;")
+            span
+            span
+            span
+          .magnify__item-img-inn.magnify-pic
+            img(src='assets/img/doc-zoom-01.jpg')
         .magnify__item-img#magnify__item-img--02
-          .magnify__item-img-inn
-            img.light-zoom(src='assets/img/doc-zoom-02.jpg')
+          .magnify__item-img-decor(style="bottom: -10px; left: -10px;")
+          .magnify__item-img-inn.magnify-pic
+            img(src='assets/img/doc-zoom-02.jpg')
         .magnify__item-img#magnify__item-img--03
-          .magnify__item-img-inn
-            img.light-zoom(src='assets/img/doc-zoom-01.jpg')
+          .magnify__item-img-decor(style="top: 50%; left: -10px;")
+          .magnify__item-img-inn.magnify-pic
+            img(src='assets/img/doc-zoom-01.jpg')
 //END   magnify-section

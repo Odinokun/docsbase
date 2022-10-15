@@ -18,18 +18,21 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 600px;
+  min-height: 350px;
   margin-bottom: 20px;
   padding: 30px;
   border-radius: 4px;
   background-color: #f4f7fb;
   background-image: url('../img/bg-find.jpg');
   background-repeat: no-repeat;
-  background-position: 78% 50%;
+  background-position: 60% 50%;
   background-size: cover;
 
+  @include min(600) {
+    min-height: 400px;
+  }
   @include min(769) {
-    background-position: 50% 50%;
+    min-height: 600px;
   }
   @include min(1025) {
     margin-bottom: 30px;

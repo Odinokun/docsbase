@@ -98,27 +98,13 @@
 }
 
 .swiss-banner {
-  position: relative;
-  min-height: 600px;
-  padding: 30px;
+  display: flex;
+  flex-direction: column;
   border-radius: 4px;
   background-color: #c6100e;
-  background-image: url('../img/swiss.jpg');
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
-  background-size: cover;
 
-  @include min(600) {
-    padding: 50px;
-    background-position: 50% 0;
-    background-size: contain;
-  }
-  @include min(1200) {
-    min-height: 300px;
-    padding: 100px 80px;
-    background-image: url('../img/swiss-banner.jpg');
-    background-position: 100% 50%;
-    background-size: cover;
+  @include min(769) {
+    flex-direction: row;
   }
 
   &::before {
@@ -137,8 +123,59 @@
 }
 
 .swiss-banner__info {
+  padding: 30px 30px 0 30px;
+
+  @include min(769) {
+    padding: 60px 0 60px 40px;
+  }
   @include min(1200) {
-    max-width: 55%;
+    padding: 100px 0 100px 80px;
+  }
+}
+
+.swiss-banner__video {
+  position: relative;
+  overflow: hidden;
+  flex: none;
+  width: 100%;
+  border-radius: 0 0 4px 4px;
+
+  @include min(769) {
+    width: 30%;
+    border-radius: 0 4px 4px 0;
+  }
+
+  &::after {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    height: 150px;
+    content: '';
+    background-image: linear-gradient(180deg, rgba(198, 16, 14, 1) 0%, rgba(198, 16, 14, .010263480392156854) 88%);
+
+    @include min(769) {
+      top: 0;
+      right: auto;
+      bottom: 0;
+      left: 0;
+      width: 150px;
+      height: auto;
+      background-image: linear-gradient(90deg, rgba(198, 16, 14, 1) 0%, rgba(198, 16, 14, .010263480392156854) 88%);
+    }
+  }
+
+  video {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
   }
 }
 

@@ -107,7 +107,6 @@ module.exports = function () {
     direction: "vertical",
     watchSlidesProgress: true,
   });
-
   const shopProductMain = new Swiper(".shop-product__slider--main", {
     thumbs: {
       swiper: shopProductThumb,
@@ -116,26 +115,18 @@ module.exports = function () {
 
   const reviewsSlider = new Swiper('.reviews-slider', {
     spaceBetween: 20,
-    grabCursor: true,
+    grabCursor: false,
     slidesPerView: 'auto',
     freeMode: true,
     freeModeMomentum: false,
     loop: true,
     speed: 4000,
-    mousewheelControl: true,
-    keyboardControl: true,
+    mousewheelControl: false,
+    keyboardControl: false,
     autoplay: {
       delay: 1,
       disableOnInteraction: true
     },
-  });
-
-  const guarantySlider = new Swiper('.our-guarantee-slider', {
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    slidesPerView: 1,
   });
 
   const trustedSlider = new Swiper('.trusted-slider', {
@@ -182,4 +173,30 @@ module.exports = function () {
     }
   });
 
+  const guaranteesThumb = new Swiper(".our-guarantees__tabs", {
+    // spaceBetween: 8,
+    slidesPerView: 4,
+    direction: "vertical",
+    speed: 2000,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: true
+    },
+  });
+  const guaranteesSlider = new Swiper('.our-guarantees-slider', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    slidesPerView: 1,
+    effect: 'fade',
+    speed: 500,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: true
+    },
+    thumbs: {
+      swiper: guaranteesThumb,
+    },
+  });
 };

@@ -8,13 +8,16 @@
   @include min(1200) {
     height: 680px;
   }
-.swiper-slide{
-  border: none;
-}
+
+  .swiper-slide {
+    border: none;
+  }
+
   .swiper-pagination {
     bottom: -10px;
     left: 0;
     width: auto;
+
     @include min(769) {
       left: 20px;
     }
@@ -29,9 +32,9 @@
     opacity: 1;
     border: 2px solid $blue-1;
     background-color: $blue-1;
-    @include min(769) {
-    margin: 15px 0 !important;
 
+    @include min(769) {
+      margin: 15px 0 !important;
     }
 
     &:first-child {
@@ -45,18 +48,18 @@
       z-index: -1;
       right: 0;
       bottom: 1px;
+      left: -38px;
       width: 30px;
       height: 2px;
       margin: auto;
       content: '';
-      left: -38px;
       background-color: $blue-1;
-      @include min(769) {
-      left: 0;
-      bottom: -2px;
-      width: 2px;
-      height: 30px;
 
+      @include min(769) {
+        bottom: -2px;
+        left: 0;
+        width: 2px;
+        height: 30px;
       }
     }
   }
@@ -190,101 +193,45 @@
   align-items: center;
   margin: 0 auto;
 
-  img {
+  img,
+  svg {
+    display: block;
+    width: 100%;
     max-height: 80%;
   }
 }
 
-/* begin SLIDE 01 */
 .how-it-works__slide-item-img--01 {
-  //&::before {
-  //  position: absolute;
-  //  top: 0;
-  //  right: 0;
-  //  left: 0;
-  //  width: 228px;
-  //  height: 40px;
-  //  margin: auto;
-  //  content: '';
-  //  animation: scan01 8s infinite;
-  //  background-image: url('../img/how-it-01-scan.svg');
-  //  background-repeat: repeat-x;
-  //  background-position: 50% 0;
-  //  background-size: contain;
-  //}
+  svg,
   img {
-    display: block;
-    width: 100%;
-    max-width: 280px;
+    max-width: 240px;
   }
 }
 
-//@keyframes scan01 {
-//  0% {
-//    top: 40px;
-//  }
-//  50% {
-//    top: 380px;
-//  }
-//  100% {
-//    top: 40px;
-//  }
-//}
-/* end   SLIDE 01 */
-
-/* begin SLIDE 02 */
 .how-it-works__slide-item-img--02 {
-  //&::before {
-  //  position: absolute;
-  //  top: 0;
-  //  right: 0;
-  //  left: 0;
-  //  width: 40px;
-  //  height: 322px;
-  //  margin: auto;
-  //  content: '';
-  //  animation: scan01 8s infinite;
-  //  background-image: url('../img/how-it-02-scan.svg');
-  //  background-repeat: repeat-y;
-  //  background-position: 50% 0;
-  //  background-size: contain;
-  //}
+  svg,
   img {
-    display: block;
-    width: 100%;
-    max-width: 516px;
-  }
-}
-
-/* end   SLIDE 02 */
-
-/* begin SLIDE 03 */
-.how-it-works__slide-item-img--03 {
-  img {
-    display: block;
-    width: 100%;
     max-width: 430px;
   }
 }
 
-/* end   SLIDE 03 */
-
-/* begin SLIDE 04 */
-.how-it-works__slide-item-img--04 {
+.how-it-works__slide-item-img--03 {
+  svg,
   img {
-    display: block;
-    width: 100%;
+    max-width: 430px;
+  }
+}
+
+.how-it-works__slide-item-img--04 {
+  svg,
+  img {
     max-width: 516px;
   }
 }
 
-/* end   SLIDE 04 */
-
-/* begin SLIDE 05 */
 .how-it-works__slide-item-img--05 {
+  svg,
   img {
-    display: block;
-    width: 100%;
     max-width: 592px;
   }
 }

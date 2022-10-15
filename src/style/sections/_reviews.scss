@@ -106,6 +106,7 @@
   font-size: 64px;
   font-weight: 300;
   line-height: 1.3;
+  min-height: 85px;
   margin-bottom: 25px;
   color: #174184;
 }
@@ -162,6 +163,7 @@
   overflow: hidden;
   width: calc(100% + 20px);
   margin-left: -10px;
+  pointer-events: none;
 
   @include min(600) {
     width: calc(100% + 20px);

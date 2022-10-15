@@ -4,7 +4,7 @@ block variables
   - let title       = 'DocsBase'
   - let description = 'DocsBase'
 
-mixin item(icon, title)
+mixin itemBusiness(icon, title)
   li.business-second__item
     a(href="#").business-second__item-link
       .business-second__item-icon
@@ -42,19 +42,18 @@ block content
               .business-second__double-item Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
               .business-second__double-item Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             ul.business-second__list
-              +item('bu-01', 'IT and Ecommerce')
-              +item('bu-02', 'Government Services')
-              +item('bu-03', 'Business and Corporate')
-              +item('bu-04', 'Legal translations')
-              +item('bu-05', 'Financial translations')
-              +item('bu-06', 'Hospitality & Travel Translations')
-              +item('bu-07', 'Industrial &Manufacturing Services')
-              +item('bu-08', 'Public Sector Services')
-              +item('bu-09', 'Charity and Non Profit organizations')
-
+              +itemBusiness('bu-01', 'IT and Ecommerce')
+              +itemBusiness('bu-02', 'Government Services')
+              +itemBusiness('bu-03', 'Business and Corporate')
+              +itemBusiness('bu-04', 'Legal translations')
+              +itemBusiness('bu-05', 'Financial translations')
+              +itemBusiness('bu-06', 'Hospitality & Travel Translations')
+              +itemBusiness('bu-07', 'Industrial &Manufacturing Services')
+              +itemBusiness('bu-08', 'Public Sector Services')
+              +itemBusiness('bu-09', 'Charity and Non Profit organizations')
         //END   business-second
 
-        include ../sections/our-guarantee
+        include ../sections/our-guarantees
         include ../sections/our-resources
         include ../sliders/trusted-slider
         

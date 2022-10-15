@@ -1,16 +1,3 @@
-mixin slide(icon, title, text)
-  .how-it-works__slide
-    .how-it-works__slide-item
-      .how-it-works__slide-icon
-        svg
-            use(xlink:href="assets/img/sprite.svg#how-it-works-" + icon)
-      .how-it-works__slide-title #{title}
-      .how-it-works__slide-text #{text}
-    .how-it-works__slide-item
-      .how-it-works__slide-item-img
-        img(src="assets/img/how-it-01.png" alt="img")
-
-
 //BEGIN blog-slider
 .how-it-works-slider
   .swiper-wrapper
@@ -24,7 +11,7 @@ mixin slide(icon, title, text)
           .how-it-works__slide-text Take a photo of the document with a smartphone or use a scanned copy and upload to our service
         .how-it-works__slide-item
           .how-it-works__slide-item-img.how-it-works__slide-item-img--01
-            img(src="assets/img/how-it-01.svg" alt="img")
+            include ../elements/scan-01
       //END   slide 01
 
     .swiper-slide
@@ -37,7 +24,7 @@ mixin slide(icon, title, text)
           .how-it-works__slide-text ???? Choose a translation language from 120 available and pay for the order in a convenient way
         .how-it-works__slide-item
           .how-it-works__slide-item-img.how-it-works__slide-item-img--02
-            img(src="assets/img/how-it-02.svg" alt="img")
+            include ../elements/scan-02
       //END   slide 02
 
     .swiper-slide

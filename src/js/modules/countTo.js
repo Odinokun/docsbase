@@ -4,6 +4,13 @@ module.exports = function () {
   let elements = $('.reviews__counter-number');
 
   $(window).on('scroll', function () {
+    startCount();
+  });
+  $(window).on('load', function () {
+    startCount();
+  });
+
+  function startCount() {
     if ($(elements).length > 0) {
       let scroll = $(window).scrollTop() + $(window).height();
       //Если скролл до конца елемента
@@ -17,7 +24,6 @@ module.exports = function () {
         counter = 1;
       }
     }
-  });
+  }
 
-  // $('.countTo').countTo();
 };

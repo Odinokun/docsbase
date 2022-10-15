@@ -1,7 +1,7 @@
 extends ../_template
 
 mixin blog-slider-header__filter-item(title, num, newclass)
-  div(class='blog-slider-header__filter-item ' + newclass + '')
+  a(href="#" class='blog-slider-header__filter-item ' + newclass + '')
     .blog-slider-header__filter-text #{title}
     .blog-slider-header__filter-num #{num}
 
