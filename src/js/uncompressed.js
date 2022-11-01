@@ -18,7 +18,7 @@ $(document).ready(function ($) {
     'testimonials',
     'quote',
     'business',
-    ]);
+  ]);
 });
 
 function pageWidget(pages) {
@@ -38,3 +38,6 @@ function pageWidget(pages) {
 
 // END Temp navigation menu for development
 // should be commented before production
+
+
+

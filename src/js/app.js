@@ -13,4 +13,7 @@ $(function() {
   require('./modules/tabs')();
   require('./modules/menu')();
   require('./modules/magnify')();
+  require('./modules/stickyHeader')();
+  require('./modules/animate')();
+  require('./modules/parallax')();
 });

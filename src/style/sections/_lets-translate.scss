@@ -75,13 +75,7 @@
   }
 
   .pulse span {
-    display: none;
-  }
-
-  &:hover {
-    .pulse span {
-      display: block;
-    }
+    display: block;
   }
 }
 

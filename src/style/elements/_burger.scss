@@ -22,7 +22,8 @@ $burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 
     }
   }
 }
-.header.fixed{
+.sticky-header.scrolling,
+.header.fixed {
   .burger__label {
     color: $burger-color;
 

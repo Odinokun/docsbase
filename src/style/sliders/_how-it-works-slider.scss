@@ -1,6 +1,12 @@
+.how-it-works{
+  //position: sticky;
+  //top: -100px;
+  //min-height: 100vh;
+}
 .how-it-works-slider {
   overflow: hidden;
   width: 100%;
+  //pointer-events: none;
 
   @include min(769) {
     height: 550px;
@@ -8,6 +14,11 @@
   @include min(1200) {
     height: 680px;
   }
+
+  //&.scroll {
+    //pointer-events: auto;
+  //}
+
 
   .swiper-slide {
     border: none;

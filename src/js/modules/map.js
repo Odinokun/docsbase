@@ -2,7 +2,6 @@ module.exports = function () {
 
   $('#map path.office').on('click', function (e) {
     e.preventDefault();
-
     ClosePopup();
 
     let targetCountry = $(this);
@@ -12,10 +11,10 @@ module.exports = function () {
     $(targetCountry).addClass('active');
   })
 
-  // $(window).on('load', function (){
-  //   let targetPopup = '#country-popup-' + $('#map path.active').data('country');
-  //   $(targetPopup + ', #country-popup__layer').fadeIn();
-  // })
+  $(window).on('load', function (){
+    let targetPopup = '#country-popup-' + $('#map path.active').data('country');
+    $(targetPopup + ', #country-popup__layer').fadeIn();
+  })
 
   $('.map-section__countries-link').on('click', function (e) {
     e.preventDefault();

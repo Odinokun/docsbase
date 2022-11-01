@@ -175,7 +175,6 @@ svg {
 
 .light-page {
   .header {
-    position: relative;
     border-bottom: 1px solid $blue-light-2;
     background-color: #fff;
   }
@@ -335,6 +334,7 @@ svg {
     }
   }
 }
+
 .pulse-blue {
   position: relative;
   z-index: 1;
@@ -348,7 +348,7 @@ svg {
     left: 0;
     content: '';
     animation: animatePuls 3s linear infinite;
-    border: 1px solid #295AA8;
+    border: 1px solid #295aa8;
     border-radius: 50%;
 
     &:nth-child(2) {
@@ -372,3 +372,18 @@ svg {
 }
 
 
+.pt {
+  padding-top: 80px;
+}
+
+h1,
+h2,
+.how-it-works__title,
+.docexpress__title {
+  opacity: 0;
+  animation-duration: 1.5s;
+
+  &.animate__animated {
+    opacity: 1;
+  }
+}
