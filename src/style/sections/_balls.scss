@@ -32,6 +32,7 @@
 /* begin BALLS */
 .balls {
   position: relative;
+  display: block;
   max-width: 400px;
   height: 1030px;
   margin-right: auto;
@@ -42,6 +43,7 @@
     height: 600px;
   }
   @include min(1200) {
+    display: none;
     height: 800px;
   }
 }

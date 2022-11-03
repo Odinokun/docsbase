@@ -1,11 +1,16 @@
 /* begin TESTIMONIALS HEADER */
 .testimonials__header {
   margin-bottom: 50px;
+  padding-top: 20px;
 
   .container {
     display: flex;
+    flex-direction: column;
+    @include min(1200) {
     align-items: baseline;
     flex-wrap: wrap;
+        flex-direction: row;
+    }
   }
 }
 
@@ -13,10 +18,13 @@
   font-family: $font-bold;
   font-weight: 400;
   line-height: 1.1;
-  margin-bottom: 0;
   color: #232230;
 
   @include responsive-font(64, 42);
+  @include min(1200) {
+  margin-bottom: 0;
+
+  }
 }
 
 .testimonials__header-descr {
@@ -24,12 +32,20 @@
   font-size: 20px;
   font-weight: 400;
   line-height: 1.4;
-  margin-left: auto;
   color: #3f3d56;
+  margin-bottom: 10px;
+  @include min(1200) {
+  margin-left: auto;
+    margin-bottom: 0;
+  }
 }
 
 .testimonials__header-btn {
+  margin-left: auto;
+  @include min(1200) {
   margin-left: 40px;
+
+  }
 }
 
 /* end   TESTIMONIALS HEADER */
@@ -87,57 +103,14 @@
   }
 }
 
-.testimonials-review__ava--01 {
+.testimonials-review__ava {
   img {
     display: block;
-    max-width: 30px;
-    max-height: 30px;
-  }
-}
+    max-width: 32px;
+    max-height: 32px;
 
-.testimonials-review__ava--02 {
-  overflow: hidden;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-
-  @include min(600) {
-    width: 82px;
-    height: 82px;
-  }
-
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-
+    object-fit: contain;
     object-position: center;
-    object-fit: cover;
-  }
-}
-
-.testimonials-review__ava--03 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #f4f7fb;
-
-  @include min(600) {
-    width: 80px;
-    height: 80px;
-  }
-
-  img {
-    max-width: 20px;
-    max-height: 20px;
-
-    @include min(600) {
-      max-width: 24px;
-      max-height: 24px;
-    }
   }
 }
 
@@ -196,6 +169,8 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 1.4;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding-top: 25px;
   color: #232230;
@@ -207,6 +182,29 @@
 
   p {
     margin: 0;
+  }
+}
+
+.testimonials-review__item-logos {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: -15px;
+  padding-top: 22px;
+}
+
+.testimonials-review__item-logo {
+  display: flex;
+  align-items: center;
+  flex: none;
+  height: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+
+  img {
+    display: block;
+    max-width: 100%;
+    max-height: 20px;
   }
 }
 
