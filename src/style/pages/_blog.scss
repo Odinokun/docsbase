@@ -1,9 +1,5 @@
 .blog-header {
-  padding-top: 10px;
-
-  @include min(769) {
-    padding-top: 30px;
-  }
+  padding-top: 50px;
 
   .container {
     text-align: center;
