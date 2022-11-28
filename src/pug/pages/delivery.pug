@@ -1,0 +1,99 @@
+extends ../_template
+
+block variables
+  - let title       = 'Shop DocsBase'
+  - let description = 'Shop DocsBase'
+  - let breadcrumbs = 'Process'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../elements/breadcrumbs-sm
+
+    //begin content
+    main.main
+      //BEGIN shop-top-wrap
+      .shop-top-wrap
+        //BEGIN shop-top
+        .shop-top#shop-top
+          .shop-top__bg(style="background-image: url('assets/img/bg-delivery.jpg')")
+          .container
+            h2.shop-top__title Payment and delivery
+            .shop-top__subtitle Get in touch with our teams in Cork and Dublin to discuss payment and credit<br>options, and to find out about special offers.
+        //END   shop-top
+      //END   shop-top-wrap
+
+      //BEGIN delivery-section
+      .delivery
+        //BEGIN payment
+        .container
+          .delivery__item
+            h2.delivery__title Payment options
+          .delivery__item
+            h4.article-sec__subtitle Bank Transfer, Credit Card or Paypal
+            .article-sec__text-sm
+              p Simply ask your business advisor about these payment options for more information and they can send you a personalised credit card or web payment link, or help set up a direct bank transfer. These service providers charge a small fee for their services, which will be included in your invoice.
+            //BEGIN pay-systems
+            .delivery__pay-systems
+              a(href="#").delivery__pay-system
+                img(src="assets/img/delivery-pay/master-card.svg" alt="icon")
+              a(href="#").delivery__pay-system
+                img(src="assets/img/delivery-pay/maestro.svg" alt="icon")
+              a(href="#").delivery__pay-system
+                img(src="assets/img/delivery-pay/visa.svg" alt="icon")
+              a(href="#").delivery__pay-system
+                img(src="assets/img/delivery-pay/paypal.svg" alt="icon")
+              a(href="#").delivery__pay-system
+                img(src="assets/img/delivery-pay/interac.svg" alt="icon")
+              a(href="#").delivery__pay-system
+                img(src="assets/img/delivery-pay/american-express.svg" alt="icon")
+            //END   pay-systems
+            .delivery__pay-systems-footer Don't forget to double check with your business adviser that your payment detailsare correct for your chosen payment method.
+
+            .delivery__pay-banner
+              .delivery__pay-banner-icon
+                img(src="assets/img/del-icon.jpg" alt="icon")
+              .delivery__pay-banner-info
+                .delivery__pay-banner-title Regular payment plan
+                .delivery__pay-banner-text Clients who regularly use our services can avail of a payment plan based on a 30 day cycle. This is available for all corporate, or private clients that pass our credit check.
+                .delivery__pay-banner-footer Our teams in Dublin and Cork can give you more information, or email <a href="mailto:info@docsbase.com">info@docsbase.com</a>
+        //END   payment
+
+        //BEGIN delivery
+        .container
+          .delivery__item
+            h2.delivery__title Delivery
+          .delivery__item
+            h4.article-sec__subtitle DHL, Fedex or standart Post
+            .article-sec__text-sm
+              p For Irish orders we can offer delivery via standard An Post service free of charge, with the option of choosing registered post, or courier delivery if you prefer. For deliveries in mainland Europe, we operate our own courier service, Turbo Courier Swiss.
+
+            //BEGIN post-systems
+            .delivery__post-systems
+              a(href="#").delivery__post-system
+                img(src="assets/img/delivery-pay/dhl.svg" alt="icon")
+              a(href="#").delivery__post-system
+                img(src="assets/img/delivery-pay/fedex.svg" alt="icon")
+              a(href="#").delivery__post-system
+                img(src="assets/img/delivery-pay/local-post.svg" alt="icon")
+            //END   post-systems
+
+            .delivery__pay-banner.delivery__pay-banner--rounds
+              .delivery__pay-banner-icon
+                img(src="assets/img/qr.svg" alt="icon")
+              .delivery__pay-banner-info
+                .delivery__pay-banner-awards
+                  img(src="assets/img/awards.png" alt="awards")
+                .delivery__pay-banner-title Digital Translations – 100% legalized
+                .delivery__pay-banner-text You don't need to wait for the original of your translation, get the digital translation online! All you need – is a unique QR code that is supported worldwide in accordance with any standards and requirements.
+                .delivery__pay-banner-footer Our teams in Dublin and Cork can give you more information, or email <a href="mailto:info@docsbase.com">info@docsbase.com</a>
+        //END   delivery
+      //END   delivery-section
+
+
+      include ../sections/rates
+      include ../sections/tags
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

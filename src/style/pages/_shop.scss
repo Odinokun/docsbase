@@ -21,6 +21,30 @@
   }
 }
 
+.shop-top__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    background-image: linear-gradient(180deg, rgba(37, 37, 45, .8) 0%, rgba(37, 37, 45, .2) 100%);
+  }
+}
+
 .shop-top__title {
   font-family: $font-bold;
   font-weight: 400;

@@ -18,6 +18,11 @@ $(document).ready(function ($) {
     'testimonials',
     'quote',
     'business',
+    'lang-01',
+    'lang-02',
+    'lang-03',
+    'single-lang',
+    'delivery',
   ]);
 });
 

@@ -1,0 +1,30 @@
+mixin countryItem(country)
+  a(href="#").lang-find__item
+    .lang-find__flag
+      img(src="assets/img/flags/" + country + ".svg" alt=country)
+    .lang-find__item-title #{country}
+    .lang-find__item-text Ukrainian translations in Ireland. At DocsBase Translation Services, we offer the most cost effective and high quality fully certified Ukrainian
+
+//BEGIN lang-find
+.lang-find
+  .container
+    .lang-find__title Choose language
+    .lang-find__subtitle We specialise in language services and localization.Our offices in Dublin, Cork and beyond translate situations into solutions
+    .lang-find__list
+      +countryItem("French")
+      +countryItem("Urdu")
+      +countryItem("Ukraine")
+
+      .lang-find__banner(style="background-image: url('assets/img/shop-find-banner.jpg')")
+        h3.lang-find__banner-title Get a 10% discount on translation for students
+
+      +countryItem("Thai")
+      +countryItem("Slovenian")
+      +countryItem("Slovak")
+      +countryItem("Serbian")
+      +countryItem("Turkish")
+      +countryItem("Romanian")
+      +countryItem("Punjabi")
+      +countryItem("Portuguese")
+//END   lang-find
+

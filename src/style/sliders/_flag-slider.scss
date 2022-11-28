@@ -1,0 +1,128 @@
+.lang-slider-header {
+  margin-bottom: 37px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.lang-slider-header__title {
+  font-family: $font-bold;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.3;
+  margin-right: auto;
+  margin-bottom: 0;
+  padding: 0 20px 0 0;
+  color: #232230;
+
+  @include responsive-font(48, 38);
+}
+
+.flag-slider {
+  position: relative;
+  margin-bottom: 30px;
+
+  @include min(1025) {
+    overflow: hidden;
+    margin-bottom: 43px;
+  }
+
+  .swiper-button-disabled {
+    transition: $transition;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+
+    @include min(1025) {
+      top: 158px;
+      display: flex;
+      width: 64px;
+      height: 64px;
+      margin-top: 0;
+      border-radius: 50%;
+      background-color: #295aa8;
+    }
+
+    &::after {
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+
+  .swiper-button-prev {
+    left: calc(15% - 20px);
+
+    @include min(1400) {
+      left: calc(12% - 32px);
+    }
+  }
+
+  .swiper-button-next {
+    right: calc(14.3% - 20px);
+
+    @include min(1400) {
+      right: calc(12% - 32px);
+    }
+  }
+
+  .swiper-scrollbar {
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #f4f7fb;
+  }
+
+  .swiper-scrollbar-drag {
+    height: 12px;
+    margin-top: -2px;
+    border-radius: 6px;
+    background-color: #295aa8;
+    background-image: url('../img/scroll-decor.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 7px 4px;
+
+    &:hover {
+      cursor: grab;
+    }
+  }
+}
+
+.lang-slider__slide {
+  margin-bottom: 68px;
+  transition: $transition;
+
+  .lang-find__item {
+    width: 100%;
+  }
+}
+
+.lang-slider__slide.swiper-slide-next + .swiper-slide {
+  @include min(1025) {
+    pointer-events: none;
+    opacity: .35;
+  }
+  @include min(1400) {
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
+.lang-slider__slide.swiper-slide-next + .swiper-slide + .swiper-slide {
+  @include min(1400) {
+    pointer-events: none;
+    opacity: .35;
+  }
+}
+
+.lang-slider__slide:last-child {
+  pointer-events: auto !important;
+  opacity: 1 !important;
+}

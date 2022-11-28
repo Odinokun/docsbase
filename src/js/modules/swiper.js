@@ -27,6 +27,33 @@ module.exports = function () {
     }
   });
 
+  const flagSlider = new Swiper('.flag-slider', {
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    spaceBetween: 20,
+    slidesPerView: 1.1,
+    breakpoints: {
+      769: {
+        spaceBetween: 20,
+        slidesPerView: 2.3,
+      },
+      1025: {
+        spaceBetween: 30,
+        slidesPerView: 3,
+      },
+      1400: {
+        spaceBetween: 30,
+        slidesPerView: 4,
+      }
+    }
+  });
+
   const docSlider = new Swiper('.doc-slider', {
     scrollbar: {
       el: '.swiper-scrollbar',
@@ -73,6 +100,37 @@ module.exports = function () {
       1400: {
         spaceBetween: 15,
         slidesPerView: 4,
+      }
+    }
+  });
+
+  const langTop = new Swiper('.lang-top-slider', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    spaceBetween: 10,
+    slidesPerView: 1.5,
+    breakpoints: {
+      600: {
+        spaceBetween: 10,
+        slidesPerView: 2,
+      },
+      769: {
+        spaceBetween: 10,
+        slidesPerView: 3,
+      },
+      1025: {
+        spaceBetween: 15,
+        slidesPerView: 4,
+      },
+      1200: {
+        spaceBetween: 15,
+        slidesPerView: 5,
+      },
+      1400: {
+        spaceBetween: 15,
+        slidesPerView: 6,
       }
     }
   });
@@ -196,68 +254,5 @@ module.exports = function () {
       swiper: guaranteesThumb,
     },
   });
-
-
-  // BEGIN stop scroll
-  // $(window).on("scroll", function () {
-  //   let sliderSection = $('.how-it-works-slider');
-  //   let sliderSectionOffset = $(sliderSection).offset().top;
-  //   let windowTop = $(window).scrollTop();
-  //
-  //   if (windowTop > (sliderSectionOffset - 150) && !sliderSection.hasClass('scroll')) {
-  //     disableScroll();
-  //     sliderSection.addClass('scroll')
-  //   }
-  // });
-  //
-  // howItWorksSlider.on('reachEnd', function () {
-  //   enableScroll();
-  // });
-  // END stop scroll
-
-  // BEGIN stop scroll functions
-  let keys = {37: 1, 38: 1, 39: 1, 40: 1};
-
-  function preventDefault(e) {
-    e.preventDefault();
-  }
-
-  function preventDefaultForScrollKeys(e) {
-    if (keys[e.keyCode]) {
-      preventDefault(e);
-      return false;
-    }
-  }
-
-// modern Chrome requires { passive: false } when adding event
-  let supportsPassive = false;
-  try {
-    window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-      get: function () {
-        supportsPassive = true;
-      }
-    }));
-  } catch (e) {
-  }
-
-  let wheelOpt = supportsPassive ? {passive: false} : false;
-  let wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
-
-  function disableScroll() {
-    window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-    window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-    window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-    window.addEventListener('keydown', preventDefaultForScrollKeys, false);
-  }
-
-  function enableScroll() {
-    window.removeEventListener('DOMMouseScroll', preventDefault, false);
-    window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
-    window.removeEventListener('touchmove', preventDefault, wheelOpt);
-    window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-  }
-
-  // END stop scroll functions
-
 
 };

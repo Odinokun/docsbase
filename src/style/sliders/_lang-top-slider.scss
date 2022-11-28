@@ -1,0 +1,139 @@
+.lang-top-slider {
+  position: relative;
+  padding: 0 10px;
+
+  @include min(1025) {
+    overflow: hidden;
+  }
+
+  .swiper-button-disabled {
+    transition: $transition;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 50%;
+    display: flex;
+    width: 42px;
+    height: 42px;
+    margin-top: 0;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: #295aa8;
+
+    &::after {
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 10px;
+
+    @include min(769) {
+      left: 0;
+    }
+  }
+
+  .swiper-button-next {
+    right: 10px;
+
+    @include min(769) {
+      right: 0;
+    }
+  }
+
+  .swiper-slide:last-child {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+  }
+
+  //.swiper-slide.swiper-slide-next + .swiper-slide {
+  //  @include min(1025) {
+  //    pointer-events: none;
+  //    opacity: .35;
+  //  }
+  //  @include min(1400) {
+  //    pointer-events: auto;
+  //    opacity: 1;
+  //  }
+  //}
+
+
+  .swiper-slide.swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide {
+    pointer-events: none;
+    opacity: .35;
+  }
+
+  .swiper-slide.swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide {
+    pointer-events: none;
+    opacity: .35;
+
+    @include min(1400) {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+
+  .swiper-slide.swiper-slide-next + .swiper-slide + .swiper-slide {
+    pointer-events: none;
+    opacity: .35;
+
+    @include min(1200) {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+
+  .swiper-slide.swiper-slide-next + .swiper-slide {
+    pointer-events: none;
+    opacity: .35;
+
+    @include min(1025) {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+
+  .doc-slider__slide:last-child {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+  }
+}
+
+.lang-top-slider__slide {
+  display: flex;
+  align-items: center;
+  height: auto;
+  padding: 15px;
+  border: 1px solid rgba(197, 207, 224, .35);
+  border-radius: 4px;
+}
+
+.lang-top-slider__slide-pic {
+  flex: none;
+  width: 44px;
+  height: 32px;
+  margin-right: 20px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+
+.lang-top-slider__slide-title {
+  font-family: $font-bold;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 2px;
+  color: #3f3d56;
+}

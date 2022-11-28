@@ -1,0 +1,23 @@
+mixin slide(country)
+  a(href="#").lang-top-slider__slide.swiper-slide
+    .lang-top-slider__slide-pic
+      img(src="assets/img/flags/" + country + ".svg" alt=country)
+    .lang-top-slider__slide-title #{country}
+
+//BEGIN lang-top-slider
+.lang-top-slider
+  .swiper-wrapper
+    +slide('Ukraine')
+    +slide('Turkish')
+    +slide('German')
+    +slide('Poland')
+    +slide('Ireland')
+    +slide('Thai')
+    +slide('French')
+    +slide('Urdu')
+    +slide('Slovenian')
+    +slide('Slovak')
+    +slide('Serbian')
+  .swiper-button-prev
+  .swiper-button-next
+//END   lang-top-slider

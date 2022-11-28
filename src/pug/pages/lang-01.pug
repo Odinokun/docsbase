@@ -1,0 +1,37 @@
+extends ../_template
+
+block variables
+  - let title       = 'Shop DocsBase'
+  - let description = 'Shop DocsBase'
+  - let breadcrumbs = 'Languages'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../elements/breadcrumbs-sm
+
+    //begin content
+    main.main
+      //BEGIN shop-top-wrap
+      .shop-top-wrap
+        //BEGIN shop-top
+        .shop-top#shop-top
+          .container
+            h2.shop-top__title Professional translations<br>on 45+ languages
+            .shop-top__subtitle We only work with the best linguists from around the world, <br>ensuring the best quality service and unbeatable completion times
+        //END   shop-top
+
+        //BEGIN shop-top__popular
+        .shop-top__popular
+          .container
+            .shop-top__popular-title Most popular languages now:
+            .shop-top__popular-slider-wrap
+              include ../sliders/lang-top-slider
+        //END   shop-top__popular
+      //END   shop-top-wrap
+      include ../sections/lang-find
+      include ../sections/consult-3
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

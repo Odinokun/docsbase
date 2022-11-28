@@ -1,0 +1,95 @@
+extends ../_template
+
+block variables
+  - let title       = 'Shop DocsBase'
+  - let description = 'Shop DocsBase'
+  - let breadcrumbs = 'Ukrainian'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../elements/breadcrumbs-lang
+
+    //begin content
+    main.main
+      //BEGIN single-lang-top
+      .single-lang-top(style="background-image:url('assets/img/bg-single-lang-top.jpg')")
+        .container
+          .single-lang-top__flag
+            img(src="assets/img/flags/Ukraine.svg" alt="Ukraine")
+          h2.single-lang-top__title Ukranian Translation
+          .single-lang-top__descr Ukrainian Translation and Localization Services. From Docsbase International.
+      //END   single-lang-top
+
+      //BEGIN article-sec
+      .article-sec
+        .container
+          .article-sec__item
+            h3.article-sec__title Ukrainian Translation in Ireland
+          .article-sec__item
+            .article-sec__text-sm
+              p At DocsBase Translation Services, we offer the most cost effective and high quality fully certified Ukrainian translations in Ireland and Europe. We understand that the translation and <a href="#">legalisation of your document</a> can appear daunting but don’t worry; we are here to make it easy for you. Our system is clear, simple and ensures you receive your document quickly and with the minimum amount of fuss. We provide the highest quality and most cost effective Ukrainian to English and English to Ukrainian <a href="#">fully certified translations</a>.
+              p Our Ukrainian translators, editors and proofreaders have years of experience translating Ukrainian civil documents, Birth Certificates, Marriage Certificates, Divorce Certificates, Diplomas, Degrees, Adoption documents, Power of Attorney, Ukrainian court decisions, Ukrainian criminal records, other types of documents and specific fields of terminology including medical, legal, academic, technical, financial, etc. The list is endless!
+              p All of our translations are fully certified and we can even have them attested by a Notary Public or Solicitor if required. If your document needs to be legalised for use in another country, we can notarise the translated document and then legalise it by placing an Apostille on it. You can rest assured safe in the knowledge that all of your documents will word perfect, quickly translated and all for the lowest price in Ireland.
+              p We are always happy to meet our clients in person in one of our offices but, we know how important your time is. This is why you don’t have to come to us in person. All you have to do is send us a scan or take a photo with your smart phone and email it to us. Just make sure the photo is very clear! That is all we need in order to arrange a quotation for you and even begin translating. The fully certified translation will be sent to you within a very short timeframe. Our fully certified Ukrainian translations are valid internationally as well as in the Republic of Ireland.
+      //END   article-sec
+
+      //BEGIN lang-banner-sec
+      .lang-banner-sec
+        .container
+          .lang-banner(style="background-image: url('assets/img/office-lang.jpg')")
+            .lang-banner__discount Get 10% discount
+            .lang-banner__footer
+              .lang-banner__footer-left
+                h2.lang-banner__title Book a now and get 10% discount first order
+                .lang-banner__descr When CTS receives a request from a client, the requested service is logged on to our system with the full details.
+              button.btn-arr
+                .btn-arr__text Send Request
+                .btn-arr__icon
+                  +svg('arr-right-top')
+      //END   lang-banner-sec
+
+      //BEGIN article-social
+      .article-social
+        .container
+          .article-social__quest
+            .article-social__quest-top Do you have a question? <a href="#">Contact Us</a>
+            .article-social__quest-bottom We are ready to answer on any of your questions.
+
+          .article-social__soclist
+            .article-social__soclist-text Like this article? Share it now:
+            .article-social__soclist-links
+              a(href="#" target="_blank" rel="nofollow noopener noreferrer").article-social__soclist-link
+                +svg('fb')
+              a(href="#" target="_blank" rel="nofollow noopener noreferrer").article-social__soclist-link
+                +svg('ln')
+              a(href="#" target="_blank" rel="nofollow noopener noreferrer").article-social__soclist-link
+                +svg('tw')
+              a(href="mailto:info@certifiedtranslations.ie").article-social__soclist-link
+                +svg('email')
+      //END   article-social
+
+      //BEGIN lang-slider-header
+      .lang-slider-header
+        .container
+          h2.lang-slider-header__title Other languages
+      //END   lang-slider-header
+
+      //BEGIN slider-section
+      .slider-section
+        .container
+          include ../sliders/flag-slider
+      //END   slider-section
+
+      .article-back-btn
+        .container
+          button.btn-arr
+            .btn-arr__text Back to all languages
+            .btn-arr__icon
+              +svg('arr-right-top')
+
+
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

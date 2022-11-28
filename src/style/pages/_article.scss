@@ -101,13 +101,14 @@
   span {
     color: $blue-1;
   }
-    a {
-      color: $blue-1;
 
-      &:hover {
-        text-decoration: underline;
-      }
+  a {
+    color: $blue-1;
+
+    &:hover {
+      text-decoration: underline;
     }
+  }
 }
 
 /* end   ARTICLE HEADER */
@@ -164,6 +165,11 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  a {
+    text-decoration: underline;
+    color: #232230;
   }
 
   &:last-child {
@@ -289,11 +295,6 @@
 /* begin ARTICLE BANNER */
 .article-banner-sec {
   margin-bottom: 30px;
-  //padding-bottom: 60px;
-
-  @include min(1025) {
-    //padding-bottom: 100px;
-  }
 }
 
 .article-banner {
@@ -321,10 +322,9 @@
     bottom: 0;
     left: 0;
     content: '';
-    background-image: url('../img/bg-office.png');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
+    opacity: .85;
+    background-color: rgba(35, 34, 48, .5);
+    background-image: linear-gradient(180deg, rgba(35, 34, 48, 0) 0%, #232230 100%);
   }
 }
 

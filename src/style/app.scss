@@ -35,6 +35,7 @@
 @import 'sections/our-resources';
 @import 'sections/magnify';
 @import 'sections/how-it-works';
+@import 'sections/lang-find';
 
 @import 'sections/footer/footer';
 @import 'sections/footer/footer-left';
@@ -47,6 +48,8 @@
 @import 'sliders/shop-top-slider';
 @import 'sliders/trusted-slider';
 @import 'sliders/how-it-works-slider';
+@import 'sliders/lang-top-slider';
+@import 'sliders/flag-slider';
 
 //pages
 @import 'pages/main';
@@ -63,5 +66,7 @@
 @import 'pages/testimonials';
 @import 'pages/quote';
 @import 'pages/business';
+@import 'pages/single-lang';
+@import 'pages/delivery';
 
 @import 'pages/inner';

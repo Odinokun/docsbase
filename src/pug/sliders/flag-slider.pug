@@ -1,0 +1,38 @@
+mixin countryItem(country)
+  a(href="#").lang-find__item
+    .lang-find__flag
+      img(src="assets/img/flags/" + country + ".svg" alt=country)
+    .lang-find__item-title #{country}
+    .lang-find__item-text Ukrainian translations in Ireland. At DocsBase Translation Services, we offer the most cost effective and high quality fully certified Ukrainian
+
+
+//BEGIN flag-slider
+.flag-slider
+  .swiper-wrapper
+    .lang-slider__slide.swiper-slide
+      +countryItem("French")
+    .lang-slider__slide.swiper-slide
+      +countryItem("Urdu")
+    .lang-slider__slide.swiper-slide
+      +countryItem("Ukraine")
+    .lang-slider__slide.swiper-slide
+      +countryItem("Thai")
+    .lang-slider__slide.swiper-slide
+      +countryItem("Slovenian")
+    .lang-slider__slide.swiper-slide
+      +countryItem("Slovak")
+    .lang-slider__slide.swiper-slide
+      +countryItem("Serbian")
+    .lang-slider__slide.swiper-slide
+      +countryItem("Turkish")
+    .lang-slider__slide.swiper-slide
+      +countryItem("Romanian")
+    .lang-slider__slide.swiper-slide
+      +countryItem("Punjabi")
+    .lang-slider__slide.swiper-slide
+      +countryItem("Portuguese")
+
+  .swiper-button-prev
+  .swiper-button-next
+  .swiper-scrollbar
+//END   flag-slider
